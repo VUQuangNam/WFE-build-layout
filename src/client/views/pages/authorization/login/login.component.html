@@ -1,0 +1,50 @@
+<!-- begin:: Page -->
+<div class="sss-grid sss-grid--hor sss-grid--root  sss-login sss-login--v5 sss-login--signin" id="sss_login">
+    <div class="sss-grid__item sss-grid__item--fluid sss-grid sss-grid--desktop sss-grid--ver-desktop sss-grid--hor-tablet-and-mobile"
+        style="background-image: url('/assets/media/bg/bg-3.jpg'); background-size: cover;background-repeat: no-repeat">
+        <div class="sss-login__left">
+        </div>
+        <div class="sss-login__right">
+            <div class="sss-login__wrapper">
+                <div class="sss-login__signin">
+                    <div class="sss-login__head">
+                        <img class="sss-login__logo" src="/assets/media/logos/logo-full.png" />
+                    </div>
+                    <div class="sss-login__form">
+                        <form class="sss-form" (ngSubmit)="f.valid && login(f)" #f="ngForm" autocomplete="off">
+
+                            <div class="form-group validated">
+                                <input required minlength="6" class="form-control" type="text"
+                                    placeholder="Tên Đăng Nhập..." name="username" autocomplete="off"
+                                    [(ngModel)]="model.username" #username="ngModel">
+
+                                <div class="invalid-feedback"
+                                    *ngIf="username.errors && (username.dirty || username.touched || !invalid)">
+                                    Tên đăng nhập phải từ 6 ký tự (không chứa khoảng trắng).
+                                </div>
+                            </div>
+
+                            <div class="form-group validated">
+                                <input required minlength="6" class="form-control form-control-last" type="password"
+                                    placeholder="******" name="password" [(ngModel)]="model.password"
+                                    #password="ngModel">
+
+                                <div class="invalid-feedback"
+                                    *ngIf="password.errors && (password.dirty || password.touched || !invalid)">
+                                    Tên đăng nhập phải từ 6 ký tự (không chứa khoảng trắng).
+                                </div>
+                            </div>
+
+                            <div class="sss-login__actions">
+                                <button type="submit" id="sss_login_signin_submit" class="btn btn-danger btn-pill">
+                                    Đăng Nhập
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end:: Page -->

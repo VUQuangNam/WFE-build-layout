@@ -1,0 +1,64 @@
+<div class="sss-portlet">
+    <div class="sss-portlet__body sss-padding-0">
+        <!-- begin::Filter Left -->
+        <div class="accordion  accordion-toggle-arrow" id="accordionExample4">
+            <div class="card" *ngFor="let group of filters">
+                <div class="card-header" id="headingTwo2">
+                    <div class="card-title collapsed" data-toggle="collapse"
+                        [attr.data-target]="'#search_' + group?.group" aria-expanded="true"
+                        [attr.aria-controls]="'search_' + group?.group">
+                        {{group?.title}}
+                    </div>
+                </div>
+                <div id="search_{{group.group}}" class="collapse show" [attr.aria-labelledby]="group?.group"
+                    [attr.data-parent]="'#search_' + group?.group">
+                    <!-- begin:: For Text & Number -->
+                    <div class="card-body" *ngIf="
+                        group?.type === 'text' ||
+                        group?.type === 'number'
+                    ">
+                        <div class="form-group" *ngFor="let item of group?.values;let index = index" [ngClass]="{
+                                'sss-margin-b-10': (index + 1) !== group?.values?.length,
+                                'sss-margin-b-0': (index + 1) === group?.values?.length
+                            }">
+                            <input (input)="handleChangeKeyword($event)" [placeholder]="item?.text" [type]="group?.type"
+                                [name]="item?.name" class="form-control">
+                        </div>
+                    </div>
+                    <!-- begin:: For Text & Number -->
+
+                    <!-- begin:: For Checkbox -->
+                    <div class="card-body" *ngIf="group?.type === 'checkbox'">
+                        <div class="form-group sss-margin-b-0">
+                            <div class="sss-checkbox-list">
+                                <label *ngFor="let item of group?.values" class="sss-checkbox sss-checkbox--success">
+                                    <input (click)="handleChangeFilter($event)" [checked]="item?.checked"
+                                        type="checkbox" [value]="item?.value" [name]="item?.name" /> {{item?.text}}
+                                    <span></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end:: For Checkbox -->
+
+                    <!-- begin:: For Radio -->
+                    <div class="card-body" *ngIf="group?.type === 'radio'">
+                        <div class="form-group sss-margin-b-0">
+                            <div class="sss-radio-list">
+                                <label *ngFor="let item of group?.values" class="sss-radio sss-radio--success">
+                                    <input (click)="handleChangeFilter($event)" [checked]="item?.checked" type="radio"
+                                        [value]="item?.value" [name]="item?.name" /> {{item?.text}}
+                                    <span></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end:: For Radio -->
+
+                </div>
+            </div>
+
+        </div>
+        <!-- end::Filter Left -->
+    </div>
+</div>

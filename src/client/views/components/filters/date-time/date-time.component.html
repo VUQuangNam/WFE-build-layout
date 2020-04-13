@@ -1,0 +1,16 @@
+<div class="form-group sss-group__wrapper">
+    <div class="sss-radio-inline">
+        <label class="sss-radio sss-radio--success" *ngFor="let item of filters">
+            <input (click)="onChangeType(item?.value)" type="radio" [checked]="item?.active" [value]="item?.value"
+                name="radio">
+            {{item?.name}}
+            <span></span>
+        </label>
+
+        <label class="sss-radio sss-radio--success">
+            <input type="radio" name="radio" #drp="bsDaterangepicker" (bsValueChange)="onChangeDate($event)"
+                [bsConfig]="{ dateInputFormat: 'MM/DD/YYYY'}" bsDaterangepicker>
+            Khác <span></span>
+        </label>
+    </div>
+</div>

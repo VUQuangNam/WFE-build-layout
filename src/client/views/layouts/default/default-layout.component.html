@@ -1,0 +1,36 @@
+<!-- begin:: Header Mobile -->
+<sss-header-mobile></sss-header-mobile>
+<!-- end:: Header Mobile -->
+
+<!-- begin:: Page -->
+<div class="sss-grid sss-grid--hor sss-grid--root">
+    <div class="sss-grid__item sss-grid__item--fluid sss-grid sss-grid--ver sss-page">
+        <div class="sss-grid__item sss-grid__item--fluid sss-grid sss-grid--hor sss-wrapper " id="sss_wrapper">
+
+            <!-- begin:: Header -->
+            <div id="sss_header" class="sss-header sss-grid__item  sss-header--fixed" data-ktheader-minimize="on">
+                <sss-header-top></sss-header-top>
+                <sss-header-bottom></sss-header-bottom>
+            </div>
+            <!-- end:: Header -->
+
+            <!-- begin::Container -->
+            <div class="sss-grid__item sss-grid__item--fluid sss-grid sss-grid--ver sss-grid--stretch">
+                <router-outlet></router-outlet>
+            </div>
+            <!-- end::Container -->
+
+            <!-- begin:: Footer -->
+            <!-- <sss-footer></sss-footer> -->
+            <!-- end:: Footer -->
+
+        </div>
+    </div>
+</div>
+<!-- end:: Page -->
+
+<!-- begin::Scrolltop -->
+<div id="sss_scrolltop" class="sss-scrolltop">
+    <i class="fa fa-arrow-up"></i>
+</div>
+<!-- end::Scrolltop -->
