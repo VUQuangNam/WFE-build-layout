@@ -2,11 +2,11 @@ $font_color: #16335b;
 $background_color: #ffffff;
 $margin: 0 2px;
 
-.sss-page__info {
+.vqn-page__info {
         width: 100%;
         display: flex;
         align-items: center;
-        .sss-page-action {
+        .vqn-page-action {
             width: 22px;
             height: 22px;
             margin: $margin;
@@ -20,7 +20,7 @@ $margin: 0 2px;
                 font-size: 15px;
             }
         }
-        .sss-page__value {
+        .vqn-page__value {
             width: 35px;
             margin: -1px 1px;
             input {

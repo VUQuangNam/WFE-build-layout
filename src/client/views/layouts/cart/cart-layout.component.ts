@@ -6,7 +6,7 @@ declare let KTLayout: any;
 declare let KTApp: any;
 
 @Component({
-    selector: 'sss-cart-layout',
+    selector: 'vqn-cart-layout',
     templateUrl: './cart-layout.component.html'
 })
 export class CartLayoutComponent implements OnInit {

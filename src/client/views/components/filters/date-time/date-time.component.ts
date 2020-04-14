@@ -5,7 +5,7 @@ import { DatePipe } from '@angular/common';
 declare let swal: any;
 
 @Component({
-    selector: 'sss-date-filter-group',
+    selector: 'vqn-date-filter-group',
     templateUrl: './date-time.component.html',
     encapsulation: ViewEncapsulation.None,
     providers: [

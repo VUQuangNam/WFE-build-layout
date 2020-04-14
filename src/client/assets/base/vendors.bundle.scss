@@ -1,7 +1,7 @@
 @import "~@ng-select/ng-select/themes/default.theme.css";
 
 /*==================BEGIN::Filter Group Header================*/
-.sss-filter__group {
+.vqn-filter__group {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -15,7 +15,7 @@
     flex-wrap: wrap;
     padding: 0;
     margin-bottom: 1.5rem;
-    .sss-group__filter-option {
+    .vqn-group__filter-option {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -28,11 +28,11 @@
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         padding: 0.5rem 0;
-        .sss-group__wrapper {
+        .vqn-group__wrapper {
             margin-bottom: 0 !important;
         }
     }
-    .sss-group__pagination {
+    .vqn-group__pagination {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;

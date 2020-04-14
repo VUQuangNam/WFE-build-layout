@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 
 @Component({
-    selector: 'sss-icon-group',
+    selector: 'vqn-icon-group',
     templateUrl: './icon.component.html',
     encapsulation: ViewEncapsulation.None
 })

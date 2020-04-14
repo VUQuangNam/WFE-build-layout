@@ -4,7 +4,7 @@ $color_3: #93959e;
 $color_4: #16335b;
 $color_5: #585a62;
 
-.sss-login.sss-login--v5 {
+.vqn-login.vqn-login--v5 {
 	height: auto;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -25,7 +25,7 @@ $color_5: #585a62;
 			margin-right: 0;
 		}
 	}
-	.sss-login__left {
+	.vqn-login__left {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
@@ -39,32 +39,32 @@ $color_5: #585a62;
 		-webkit-box-pack: center;
 		-ms-flex-pack: center;
 		justify-content: center;
-		.sss-login__wrapper {
+		.vqn-login__wrapper {
 			display: -webkit-box;
 			display: -ms-flexbox;
 			display: flex;
 			width: 500px;
-			.sss-login__content {
+			.vqn-login__content {
 				text-align: center;
 				padding: 1rem 1.5rem;
-				.sss-login__title {
+				.vqn-login__title {
 					margin: 5rem 0 2rem 0;
 					color: $color_1;
 					font-size: 1.4rem;
 					font-weight: 500;
 				}
-				.sss-login__desc {
+				.vqn-login__desc {
 					color: $color_2;
 					font-size: 1rem;
 				}
-				.sss-login__actions {
+				.vqn-login__actions {
 					margin: 3.4rem 0 3rem 0;
 					text-align: center;
 				}
 			}
 		}
 	}
-	.sss-login__divider {
+	.vqn-login__divider {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
@@ -82,7 +82,7 @@ $color_5: #585a62;
 			box-shadow: -19px 0 35px -7px #F5F5F5;
 		}
 	}
-	.sss-login__right {
+	.vqn-login__right {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
@@ -96,31 +96,31 @@ $color_5: #585a62;
 		-webkit-box-align: center;
 		-ms-flex-align: center;
 		align-items: center;
-		.sss-login__wrapper {
+		.vqn-login__wrapper {
 			width: 22%;
             position: absolute;
             top: 35%;
             right: 68px;
-			.sss-login__head {
+			.vqn-login__head {
 				text-align: center;
 			}
-			.sss-login__logo {
+			.vqn-login__logo {
 				text-align: center;
 				// margin: 0 auto 4rem auto;
 			}
-			.sss-login__title {
+			.vqn-login__title {
 				text-align: center;
 				font-size: 1.5rem;
 				font-weight: 500;
 				color: $color_1;
 			}
-			.sss-login__desc {
+			.vqn-login__desc {
 				margin-top: 0.75rem;
 				font-size: 1rem;
 				font-weight: 400;
 				color: $color_2;
 			}
-			.sss-login__form {
+			.vqn-login__form {
 				margin-top: 2rem;
 				.form-group {
 					margin: 0;
@@ -174,27 +174,27 @@ $color_5: #585a62;
 					}
 				}
 			}
-			.sss-login__extra {
+			.vqn-login__extra {
 				margin-top: 0.5rem;
 				color: $color_5;
-				.sss-checkbox {
+				.vqn-checkbox {
 					font-size: 1rem;
 				}
-				.sss-link {
+				.vqn-link {
 					font-size: 1rem;
 				}
 			}
-			.sss-login__actions {
+			.vqn-login__actions {
 				margin: 1.5rem 1.5rem 0;
 				text-align: center;
 			}
-			.sss-login__account {
+			.vqn-login__account {
 				text-align: center;
-				.sss-login__account-msg {
+				.vqn-login__account-msg {
 					font-size: 1.1rem;
 					font-weight: 500;
 				}
-				.sss-login__account-link {
+				.vqn-login__account-link {
 					font-size: 1.1rem;
 					font-weight: 500;
 				}
@@ -202,64 +202,64 @@ $color_5: #585a62;
 		}
 	}
 }
-.sss-login.sss-login--v5.sss-login--signin {
-	.sss-login__signin {
+.vqn-login.vqn-login--v5.vqn-login--signin {
+	.vqn-login__signin {
 		display: block;
 	}
-	.sss-login__forgot {
+	.vqn-login__forgot {
 		display: none;
 	}
 }
-.sss-login.sss-login--v5.sss-login--forgot {
-	.sss-login__signin {
+.vqn-login.vqn-login--v5.vqn-login--forgot {
+	.vqn-login__signin {
 		display: none;
 	}
-	.sss-login__forgot {
+	.vqn-login__forgot {
 		display: block;
 	}
 }
 @media (max-width: 1024px) {
-	.sss-login.sss-login--v5 {
+	.vqn-login.vqn-login--v5 {
 		-webkit-box-orient: vertical;
 		-webkit-box-direction: normal;
 		-ms-flex-direction: column;
 		flex-direction: column;
-		.sss-login__left {
+		.vqn-login__left {
 			-webkit-box-flex: 1;
 			-ms-flex-positive: 1;
 			flex-grow: 1;
 			width: 100%;
 			margin: 0 auto;
 			padding-top: 2.5rem;
-			.sss-login__wrapper {
+			.vqn-login__wrapper {
 				padding-bottom: 0;
 				margin: 0 auto;
 				-webkit-box-orient: vertical;
 				-webkit-box-direction: normal;
 				-ms-flex-direction: column;
 				flex-direction: column;
-				.sss-login__contanier {
+				.vqn-login__contanier {
 					padding: 1rem;
 					width: 100%;
 					margin-top: 3rem;
-					.sss-login__content {
+					.vqn-login__content {
 						width: 100%;
 					}
 				}
 			}
 		}
-		.sss-login__right {
+		.vqn-login__right {
 			-webkit-box-flex: 1;
 			-ms-flex-positive: 1;
 			flex-grow: 1;
 			width: 100%;
 			padding-top: 1.5rem;
 			padding-bottom: 2.5rem;
-			.sss-login__contanier {
+			.vqn-login__contanier {
 				width: 100%;
 				margin: 0 auto;
 				padding: 1rem;
-				.sss-login__actions {
+				.vqn-login__actions {
 					.btn {
 						padding: 1rem 1.95rem;
 						margin-right: 0.5rem;
@@ -270,7 +270,7 @@ $color_5: #585a62;
 				}
 			}
 		}
-		.sss-login__divider {
+		.vqn-login__divider {
 			display: -webkit-box;
 			display: -ms-flexbox;
 			display: flex;

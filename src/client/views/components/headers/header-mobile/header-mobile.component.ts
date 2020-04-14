@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
-    selector: 'sss-header-mobile',
+    selector: 'vqn-header-mobile',
     templateUrl: './header-mobile.component.html',
     encapsulation: ViewEncapsulation.None
 })

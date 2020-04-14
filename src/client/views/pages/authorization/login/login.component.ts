@@ -12,7 +12,7 @@ import { AuthService } from '../../../../services';
 declare let swal: any;
 
 @Component({
-    selector: '.sss-grid .sss-grid--ver .sss-grid--root .sss-page',
+    selector: '.vqn-grid .vqn-grid--ver .vqn-grid--root .vqn-page',
     templateUrl: './login.component.html',
     styleUrls: ['./style.component.scss'],
     encapsulation: ViewEncapsulation.None,

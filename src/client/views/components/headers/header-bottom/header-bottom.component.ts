@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
-    selector: 'sss-header-bottom',
+    selector: 'vqn-header-bottom',
     templateUrl: './header-bottom.component.html',
     encapsulation: ViewEncapsulation.None
 })

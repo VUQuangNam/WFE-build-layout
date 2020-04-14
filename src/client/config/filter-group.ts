@@ -97,15 +97,15 @@ export class FilterGroup {
                         checked: false
                     },
                     {
-                        text: 'Biết sss',
+                        text: 'Biết vqn',
                         name: 'relations',
-                        value: 'Biết sss',
+                        value: 'Biết vqn',
                         checked: false
                     },
                     {
-                        text: 'Thích sss',
+                        text: 'Thích vqn',
                         name: 'relations',
-                        value: 'Thích sss',
+                        value: 'Thích vqn',
                         checked: false
                     },
                     {

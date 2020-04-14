@@ -2,7 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Utilities } from 'src/client/utils';
 
 @Component({
-    selector: 'sss-header-top',
+    selector: 'vqn-header-top',
     templateUrl: './header-top.component.html',
     encapsulation: ViewEncapsulation.None
 })

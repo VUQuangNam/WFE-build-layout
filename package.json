@@ -2,7 +2,7 @@
     "name": "app-tslint",
     "version": "1.0.0",
     "description": "Service backend customer",
-    "author": "Thành Nguyễn <dev.thanhnguyen@gmail.com>",
+    "author": "NamVQ<vuquangnam1507@gmail.com>",
     "private": true,
     "license": "MIT",
     "engines": {
@@ -11,7 +11,7 @@
     },
     "scripts": {
         "clean": "./node_modules/.bin/rimraf dist",
-        "dev": "cross-env NODE_ENV=development ng serve",
+        "dev": "cross-env NODE_ENV=development ng serve --port 3000",
         "build:prod": "ng build --prod --build-optimizer",
         "build:dev": "ng build",
         "lint": "ng lint",

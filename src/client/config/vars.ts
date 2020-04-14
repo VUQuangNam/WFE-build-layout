@@ -133,8 +133,8 @@ export class VariableConfig {
     loadBrand = () => {
         return [
             {
-                id: 'sss',
-                name: 'sss'
+                id: 'vqn',
+                name: 'vqn'
             },
             {
                 id: 'duynguyen',

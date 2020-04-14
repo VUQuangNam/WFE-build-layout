@@ -3,7 +3,7 @@ import { ActivatedRoute, Router, Params } from '@angular/router';
 declare let swal: any;
 
 @Component({
-    selector: 'sss-page-group',
+    selector: 'vqn-page-group',
     templateUrl: './pagination.component.html',
     styleUrls: ['./style.scss'],
     encapsulation: ViewEncapsulation.None

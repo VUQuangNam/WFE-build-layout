@@ -6,7 +6,7 @@ declare let KTLayout: any;
 declare let KTApp: any;
 
 @Component({
-    selector: 'sss-default-layout',
+    selector: 'vqn-default-layout',
     templateUrl: './default-layout.component.html'
 })
 export class DefaultLayoutComponent implements OnInit {

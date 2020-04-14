@@ -142,7 +142,7 @@ var KTSelect2 = function () {
         });
 
         // disabled results
-        $('.sss-select2-general').select2({
+        $('.vqn-select2-general').select2({
             placeholder: "Select an option"
         });
     }

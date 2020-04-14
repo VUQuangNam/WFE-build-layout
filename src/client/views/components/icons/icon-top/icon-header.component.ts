@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 
 @Component({
-    selector: 'sss-icon-header-group',
+    selector: 'vqn-icon-header-group',
     templateUrl: './icon-header.component.html',
     encapsulation: ViewEncapsulation.None
 })

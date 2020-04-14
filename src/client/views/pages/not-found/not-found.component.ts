@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
-    selector: '.sss-grid .sss-grid--ver .sss-grid--root .sss-page',
+    selector: '.vqn-grid .vqn-grid--ver .vqn-grid--root .vqn-page',
     templateUrl: './not-found.component.html',
     encapsulation: ViewEncapsulation.None
 })

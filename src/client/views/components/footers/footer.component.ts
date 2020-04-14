@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
-    selector: 'sss-footer',
+    selector: 'vqn-footer',
     templateUrl: './footer.component.html',
     encapsulation: ViewEncapsulation.None
 })

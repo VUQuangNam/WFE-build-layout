@@ -8,7 +8,7 @@ import { Subject } from 'rxjs';
 declare let swal: any;
 
 @Component({
-    selector: 'sss-modal-container',
+    selector: 'vqn-modal-container',
     template: ''
 })
 

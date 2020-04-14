@@ -1445,7 +1445,7 @@ var KTDashboard = function () {
             return;
         }
 
-        var datatable = $('.sss-datatable').KTDatatable({
+        var datatable = $('.vqn-datatable').KTDatatable({
             data: {
                 type: 'remote',
                 source: {
@@ -1483,7 +1483,7 @@ var KTDashboard = function () {
                 sortable: false,
                 width: 40,
                 selector: {
-                    class: 'sss-checkbox--solid'
+                    class: 'vqn-checkbox--solid'
                 },
                 textAlign: 'center'
             }, {
@@ -1509,13 +1509,13 @@ var KTDashboard = function () {
                     ];
 
                     var output = '\
-                        <div class="sss-user-card-v2">\
-                            <div class="sss-user-card-v2__pic">\
+                        <div class="vqn-user-card-v2">\
+                            <div class="vqn-user-card-v2__pic">\
                                 <img src="https://keenthemes.com/metronic/preview/assets/media/client-logos/logo' + img + '" alt="photo">\
                             </div>\
-                            <div class="sss-user-card-v2__details">\
-                                <a href="#" class="sss-user-card-v2__name">' + data.CompanyName + '</a>\
-                                <span class="sss-user-card-v2__email">' +
+                            <div class="vqn-user-card-v2__details">\
+                                <a href="#" class="vqn-user-card-v2__name">' + data.CompanyName + '</a>\
+                                <span class="vqn-user-card-v2__email">' +
                         skills[number - 1] + '</span>\
                             </div>\
                         </div>';
@@ -1527,7 +1527,7 @@ var KTDashboard = function () {
                 title: "Date",
                 width: 100,
                 template: function (data) {
-                    return '<span class="sss-font-bold">' + data.ShipDate + '</span>';
+                    return '<span class="vqn-font-bold">' + data.ShipDate + '</span>';
                 }
             }, {
                 field: "Status",
@@ -1591,13 +1591,13 @@ var KTDashboard = function () {
 
                     var output = '';
                     if (number > 5) {
-                        output = '<div class="sss-user-card-v2">\
-							<div class="sss-user-card-v2__pic">\
+                        output = '<div class="vqn-user-card-v2">\
+							<div class="vqn-user-card-v2__pic">\
 								<img src="https://keenthemes.com/metronic/preview/assets/media/users/' + user_img + '" alt="photo">\
 							</div>\
-							<div class="sss-user-card-v2__details">\
-								<a href="#" class="sss-user-card-v2__name">' + data.CompanyAgent + '</a>\
-								<span class="sss-user-card-v2__desc">' + position[pos] + '</span>\
+							<div class="vqn-user-card-v2__details">\
+								<a href="#" class="vqn-user-card-v2__name">' + data.CompanyAgent + '</a>\
+								<span class="vqn-user-card-v2__desc">' + position[pos] + '</span>\
 							</div>\
 						</div>';
                     }
@@ -1613,13 +1613,13 @@ var KTDashboard = function () {
                             'info'];
                         var state = states[stateNo];
 
-                        output = '<div class="sss-user-card-v2">\
-							<div class="sss-user-card-v2__pic">\
-								<div class="sss-badge sss-badge--xl sss-badge--' + state + '">' + data.CompanyAgent.substring(0, 1) + '</div>\
+                        output = '<div class="vqn-user-card-v2">\
+							<div class="vqn-user-card-v2__pic">\
+								<div class="vqn-badge vqn-badge--xl vqn-badge--' + state + '">' + data.CompanyAgent.substring(0, 1) + '</div>\
 							</div>\
-							<div class="sss-user-card-v2__details">\
-								<a href="#" class="sss-user-card-v2__name">' + data.CompanyAgent + '</a>\
-								<span class="sss-user-card-v2__desc">' + position[pos] + '</span>\
+							<div class="vqn-user-card-v2__details">\
+								<a href="#" class="vqn-user-card-v2__name">' + data.CompanyAgent + '</a>\
+								<span class="vqn-user-card-v2__desc">' + position[pos] + '</span>\
 							</div>\
 						</div>';
                     }
@@ -1640,29 +1640,29 @@ var KTDashboard = function () {
                                 <i class="flaticon-more-1"></i>\
                             </a>\
                             <div class="dropdown-menu dropdown-menu-right">\
-                                <ul class="sss-nav">\
-                                    <li class="sss-nav__item">\
-                                        <a href="#" class="sss-nav__link">\
-                                            <i class="sss-nav__link-icon flaticon2-expand"></i>\
-                                            <span class="sss-nav__link-text">View</span>\
+                                <ul class="vqn-nav">\
+                                    <li class="vqn-nav__item">\
+                                        <a href="#" class="vqn-nav__link">\
+                                            <i class="vqn-nav__link-icon flaticon2-expand"></i>\
+                                            <span class="vqn-nav__link-text">View</span>\
                                         </a>\
                                     </li>\
-                                    <li class="sss-nav__item">\
-                                        <a href="#" class="sss-nav__link">\
-                                            <i class="sss-nav__link-icon flaticon2-contract"></i>\
-                                            <span class="sss-nav__link-text">Edit</span>\
+                                    <li class="vqn-nav__item">\
+                                        <a href="#" class="vqn-nav__link">\
+                                            <i class="vqn-nav__link-icon flaticon2-contract"></i>\
+                                            <span class="vqn-nav__link-text">Edit</span>\
                                         </a>\
                                     </li>\
-                                    <li class="sss-nav__item">\
-                                        <a href="#" class="sss-nav__link">\
-                                            <i class="sss-nav__link-icon flaticon2-trash"></i>\
-                                            <span class="sss-nav__link-text">Delete</span>\
+                                    <li class="vqn-nav__item">\
+                                        <a href="#" class="vqn-nav__link">\
+                                            <i class="vqn-nav__link-icon flaticon2-trash"></i>\
+                                            <span class="vqn-nav__link-text">Delete</span>\
                                         </a>\
                                     </li>\
-                                    <li class="sss-nav__item">\
-                                        <a href="#" class="sss-nav__link">\
-                                            <i class="sss-nav__link-icon flaticon2-mail-1"></i>\
-                                            <span class="sss-nav__link-text">Export</span>\
+                                    <li class="vqn-nav__item">\
+                                        <a href="#" class="vqn-nav__link">\
+                                            <i class="vqn-nav__link-icon flaticon2-mail-1"></i>\
+                                            <span class="vqn-nav__link-text">Export</span>\
                                         </a>\
                                     </li>\
                                 </ul>\
@@ -1834,8 +1834,8 @@ var KTDashboard = function () {
 
     // Earnings Sliders
     var earningsSlide = function () {
-        var carousel1 = $('#sss_earnings_widget .sss-widget30__head .owl-carousel');
-        var carousel2 = $('#sss_earnings_widget .sss-widget30__body .owl-carousel');
+        var carousel1 = $('#sss_earnings_widget .vqn-widget30__head .owl-carousel');
+        var carousel2 = $('#sss_earnings_widget .vqn-widget30__body .owl-carousel');
 
         carousel1.find('.carousel').each(function (index) {
             $(this).attr('data-position', index);

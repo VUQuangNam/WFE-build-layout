@@ -25,7 +25,7 @@ var KTApp = function () {
 
     var initTooltips = function () {
         // init bootstrap tooltips
-        $('[data-toggle="sss-tooltip"]').each(function () {
+        $('[data-toggle="vqn-tooltip"]').each(function () {
             initTooltip($(this));
         });
     }
@@ -47,7 +47,7 @@ var KTApp = function () {
 
     var initPopovers = function () {
         // init bootstrap popover
-        $('[data-toggle="sss-popover"]').each(function () {
+        $('[data-toggle="vqn-popover"]').each(function () {
             initPopover($(this));
         });
     }
@@ -229,10 +229,10 @@ var KTApp = function () {
             }, options);
 
             var html;
-            var version = options.type ? 'sss-spinner--' + options.type : '';
-            var state = options.state ? 'sss-spinner--' + options.state : '';
-            var size = options.size ? 'sss-spinner--' + options.size : '';
-            var spinner = '<div class="sss-spinner ' + version + ' ' + state + ' ' + size + '"></div';
+            var version = options.type ? 'vqn-spinner--' + options.type : '';
+            var state = options.state ? 'vqn-spinner--' + options.state : '';
+            var size = options.size ? 'vqn-spinner--' + options.size : '';
+            var spinner = '<div class="vqn-spinner ' + version + ' ' + state + ' ' + size + '"></div';
 
             if (options.message && options.message.length > 0) {
                 var classes = 'blockui ' + (options.shadow === false ? 'blockui' : '');
@@ -307,8 +307,8 @@ var KTApp = function () {
         progress: function (target, options) {
             var skin = (options && options.skin) ? options.skin : 'light';
             var alignment = (options && options.alignment) ? options.alignment : 'right';
-            var size = (options && options.size) ? 'sss-spinner--' + options.size : '';
-            var classes = 'sss-spinner ' + 'sss-spinner--' + skin + ' sss-spinner--' + alignment + ' sss-spinner--' + size;
+            var size = (options && options.size) ? 'vqn-spinner--' + options.size : '';
+            var classes = 'vqn-spinner ' + 'vqn-spinner--' + skin + ' vqn-spinner--' + alignment + ' vqn-spinner--' + size;
 
             KTApp.unprogress(target);
 
@@ -1309,7 +1309,7 @@ var KTUtil = function () {
                 return;
             }
 
-            if (!el.getAttribute('sss-hidden-' + prop) || cache === false) {
+            if (!el.getAttribute('vqn-hidden-' + prop) || cache === false) {
                 var value;
 
                 // the element is hidden so:
@@ -1326,12 +1326,12 @@ var KTUtil = function () {
                 el.style.cssText = css;
 
                 // store it in cache
-                el.setAttribute('sss-hidden-' + prop, value);
+                el.setAttribute('vqn-hidden-' + prop, value);
 
                 return parseFloat(value);
             } else {
                 // store it in cache
-                return parseFloat(el.getAttribute('sss-hidden-' + prop));
+                return parseFloat(el.getAttribute('vqn-hidden-' + prop));
             }
         },
 
@@ -1811,7 +1811,7 @@ var KTUtil = function () {
                 if (ps = KTUtil.data(element).get('ps')) {
                     ps.update();
                 } else {
-                    KTUtil.addClass(element, 'sss-scroll');
+                    KTUtil.addClass(element, 'vqn-scroll');
                     ps = new PerfectScrollbar(element, {
                         wheelSpeed: 0.5,
                         swipeEasing: true,
@@ -1894,9 +1894,9 @@ KTUtil.ready(function () {
     KTUtil.init();
 });
 
-// CSS3 Transitions only after page load(.sss-page-loading class added to body tag and remove with JS on page load)
+// CSS3 Transitions only after page load(.vqn-page-loading class added to body tag and remove with JS on page load)
 window.onload = function () {
-    KTUtil.removeClass(KTUtil.get('body'), 'sss-page--loading');
+    KTUtil.removeClass(KTUtil.get('body'), 'vqn-page--loading');
 }
 // plugin setup
 var KTAvatar = function (elementId, options) {
@@ -1949,8 +1949,8 @@ var KTAvatar = function (elementId, options) {
             the.events = [];
 
             the.input = KTUtil.find(element, 'input[type="file"]');
-            the.holder = KTUtil.find(element, '.sss-avatar__holder');
-            the.cancel = KTUtil.find(element, '.sss-avatar__cancel');
+            the.holder = KTUtil.find(element, '.vqn-avatar__holder');
+            the.cancel = KTUtil.find(element, '.vqn-avatar__cancel');
             the.src = KTUtil.css(the.holder, 'backgroundImage');
 
             // merge default and user defined options
@@ -1972,7 +1972,7 @@ var KTAvatar = function (elementId, options) {
                     }
                     reader.readAsDataURL(the.input.files[0]);
 
-                    KTUtil.addClass(the.element, 'sss-avatar--changed');
+                    KTUtil.addClass(the.element, 'vqn-avatar--changed');
                 }
             });
 
@@ -1980,7 +1980,7 @@ var KTAvatar = function (elementId, options) {
             KTUtil.addEvent(the.cancel, 'click', function (e) {
                 e.preventDefault();
 
-                KTUtil.removeClass(the.element, 'sss-avatar--changed');
+                KTUtil.removeClass(the.element, 'vqn-avatar--changed');
                 KTUtil.css(the.holder, 'background-image', the.src);
                 the.input.value = "";
             });
@@ -2105,12 +2105,12 @@ var KTDialog = function (options) {
             element = document.createElement("DIV");
             KTUtil.setHTML(element, the.options.message);
 
-            KTUtil.addClass(element, 'sss-dialog sss-dialog--shown');
-            KTUtil.addClass(element, 'sss-dialog--' + the.options.state);
-            KTUtil.addClass(element, 'sss-dialog--' + the.options.type);
+            KTUtil.addClass(element, 'vqn-dialog vqn-dialog--shown');
+            KTUtil.addClass(element, 'vqn-dialog--' + the.options.state);
+            KTUtil.addClass(element, 'vqn-dialog--' + the.options.type);
 
             if (the.options.placement == 'top center') {
-                KTUtil.addClass(element, 'sss-dialog--top-center');
+                KTUtil.addClass(element, 'vqn-dialog--top-center');
             }
 
             body.appendChild(element);
@@ -2547,7 +2547,7 @@ var KTMenu = function (elementId, options) {
          */
         build: function () {
             // General accordion submenu toggle
-            the.eventHandlers['event_1'] = KTUtil.on(element, '.sss-menu__toggle', 'click', Plugin.handleSubmenuAccordion);
+            the.eventHandlers['event_1'] = KTUtil.on(element, '.vqn-menu__toggle', 'click', Plugin.handleSubmenuAccordion);
 
             // Dropdown mode(hoverable)
             if (Plugin.getSubmenuMode() === 'dropdown' || Plugin.isConditionalSubmenuDropdown()) {
@@ -2556,12 +2556,12 @@ var KTMenu = function (elementId, options) {
                 the.eventHandlers['event_3'] = KTUtil.on(element, '[data-ktmenu-submenu-toggle="hover"]', 'mouseout', Plugin.handleSubmenuDrodownHoverExit);
 
                 // dropdown submenu - click toggle
-                the.eventHandlers['event_4'] = KTUtil.on(element, '[data-ktmenu-submenu-toggle="click"] > .sss-menu__toggle, [data-ktmenu-submenu-toggle="click"] > .sss-menu__link .sss-menu__toggle', 'click', Plugin.handleSubmenuDropdownClick);
-                the.eventHandlers['event_5'] = KTUtil.on(element, '[data-ktmenu-submenu-toggle="tab"] > .sss-menu__toggle, [data-ktmenu-submenu-toggle="tab"] > .sss-menu__link .sss-menu__toggle', 'click', Plugin.handleSubmenuDropdownTabClick);
+                the.eventHandlers['event_4'] = KTUtil.on(element, '[data-ktmenu-submenu-toggle="click"] > .vqn-menu__toggle, [data-ktmenu-submenu-toggle="click"] > .vqn-menu__link .vqn-menu__toggle', 'click', Plugin.handleSubmenuDropdownClick);
+                the.eventHandlers['event_5'] = KTUtil.on(element, '[data-ktmenu-submenu-toggle="tab"] > .vqn-menu__toggle, [data-ktmenu-submenu-toggle="tab"] > .vqn-menu__link .vqn-menu__toggle', 'click', Plugin.handleSubmenuDropdownTabClick);
             }
 
             // handle link click
-            the.eventHandlers['event_6'] = KTUtil.on(element, '.sss-menu__item > .sss-menu__link:not(.sss-menu__toggle):not(.sss-menu__link--toggle-skip)', 'click', Plugin.handleLinkClick);
+            the.eventHandlers['event_6'] = KTUtil.on(element, '.vqn-menu__item > .vqn-menu__link:not(.vqn-menu__toggle):not(.vqn-menu__link--toggle-skip)', 'click', Plugin.handleLinkClick);
 
             // Init scrollable menu
             if (the.options.scroll && the.options.scroll.height) {
@@ -2665,7 +2665,7 @@ var KTMenu = function (elementId, options) {
          * @returns {KTMenu}
          */
         resetSubmenuProps: function (e) {
-            var submenus = KTUtil.findAll(element, '.sss-menu__submenu');
+            var submenus = KTUtil.findAll(element, '.vqn-menu__submenu');
             if (submenus) {
                 for (var i = 0, len = submenus.length; i < len; i++) {
                     KTUtil.css(submenus[0], 'display', '');
@@ -2736,17 +2736,17 @@ var KTMenu = function (elementId, options) {
                 return;
             }
 
-            var item = this.closest('.sss-menu__item');
+            var item = this.closest('.vqn-menu__item');
 
             if (item.getAttribute('data-ktmenu-submenu-mode') == 'accordion') {
                 return;
             }
 
-            if (KTUtil.hasClass(item, 'sss-menu__item--hover') === false) {
-                KTUtil.addClass(item, 'sss-menu__item--open-dropdown');
+            if (KTUtil.hasClass(item, 'vqn-menu__item--hover') === false) {
+                KTUtil.addClass(item, 'vqn-menu__item--open-dropdown');
                 Plugin.showSubmenuDropdown(item);
             } else {
-                KTUtil.removeClass(item, 'sss-menu__item--open-dropdown');
+                KTUtil.removeClass(item, 'vqn-menu__item--open-dropdown');
                 Plugin.hideSubmenuDropdown(item, true);
             }
 
@@ -2762,14 +2762,14 @@ var KTMenu = function (elementId, options) {
                 return;
             }
 
-            var item = this.closest('.sss-menu__item');
+            var item = this.closest('.vqn-menu__item');
 
             if (item.getAttribute('data-ktmenu-submenu-mode') == 'accordion') {
                 return;
             }
 
-            if (KTUtil.hasClass(item, 'sss-menu__item--hover') == false) {
-                KTUtil.addClass(item, 'sss-menu__item--open-dropdown');
+            if (KTUtil.hasClass(item, 'vqn-menu__item--hover') == false) {
+                KTUtil.addClass(item, 'vqn-menu__item--open-dropdown');
                 Plugin.showSubmenuDropdown(item);
             }
 
@@ -2781,7 +2781,7 @@ var KTMenu = function (elementId, options) {
          * @returns {KTMenu}
          */
         handleLinkClick: function (e) {
-            var submenu = this.closest('.sss-menu__item.sss-menu__item--submenu'); //
+            var submenu = this.closest('.vqn-menu__item.vqn-menu__item--submenu'); //
             if (submenu && Plugin.getSubmenuMode(submenu) === 'dropdown') {
                 Plugin.hideSubmenuDropdowns();
             }
@@ -2797,10 +2797,10 @@ var KTMenu = function (elementId, options) {
                 return;
             }
 
-            var shown = element.querySelectorAll('.sss-menu__item.sss-menu__item--submenu.sss-menu__item--hover:not(.sss-menu__item--tabs)');
+            var shown = element.querySelectorAll('.vqn-menu__item.vqn-menu__item--submenu.vqn-menu__item--hover:not(.vqn-menu__item--tabs)');
 
             // check if currently clicked link's parent item ha
-            if (shown.length > 0 && KTUtil.hasClass(el, 'sss-menu__toggle') === false && el.querySelectorAll('.sss-menu__toggle').length === 0) {
+            if (shown.length > 0 && KTUtil.hasClass(el, 'vqn-menu__toggle') === false && el.querySelectorAll('.vqn-menu__toggle').length === 0) {
                 // close opened dropdown menus
                 for (var i = 0, len = shown.length; i < len; i++) {
                     Plugin.hideSubmenuDropdown(shown[0], true);
@@ -2816,17 +2816,17 @@ var KTMenu = function (elementId, options) {
             var query;
             var item = el ? el : this;
 
-            if (Plugin.getSubmenuMode(el) === 'dropdown' && (query = item.closest('.sss-menu__item'))) {
+            if (Plugin.getSubmenuMode(el) === 'dropdown' && (query = item.closest('.vqn-menu__item'))) {
                 if (query.getAttribute('data-ktmenu-submenu-mode') != 'accordion') {
                     e.preventDefault();
                     return;
                 }
             }
 
-            var li = item.closest('.sss-menu__item');
-            var submenu = KTUtil.child(li, '.sss-menu__submenu, .sss-menu__inner');
+            var li = item.closest('.vqn-menu__item');
+            var submenu = KTUtil.child(li, '.vqn-menu__submenu, .vqn-menu__inner');
 
-            if (KTUtil.hasClass(item.closest('.sss-menu__item'), 'sss-menu__item--open-always')) {
+            if (KTUtil.hasClass(item.closest('.vqn-menu__item'), 'vqn-menu__item--open-always')) {
                 return;
             }
 
@@ -2835,20 +2835,20 @@ var KTMenu = function (elementId, options) {
                 var speed = the.options.accordion.slideSpeed;
                 var hasClosables = false;
 
-                if (KTUtil.hasClass(li, 'sss-menu__item--open') === false) {
+                if (KTUtil.hasClass(li, 'vqn-menu__item--open') === false) {
                     // hide other accordions                    
                     if (the.options.accordion.expandAll === false) {
-                        var subnav = item.closest('.sss-menu__nav, .sss-menu__subnav');
-                        var closables = KTUtil.children(subnav, '.sss-menu__item.sss-menu__item--open.sss-menu__item--submenu:not(.sss-menu__item--here):not(.sss-menu__item--open-always)');
+                        var subnav = item.closest('.vqn-menu__nav, .vqn-menu__subnav');
+                        var closables = KTUtil.children(subnav, '.vqn-menu__item.vqn-menu__item--open.vqn-menu__item--submenu:not(.vqn-menu__item--here):not(.vqn-menu__item--open-always)');
 
                         if (subnav && closables) {
                             for (var i = 0, len = closables.length; i < len; i++) {
                                 var el_ = closables[0];
-                                var submenu_ = KTUtil.child(el_, '.sss-menu__submenu');
+                                var submenu_ = KTUtil.child(el_, '.vqn-menu__submenu');
                                 if (submenu_) {
                                     KTUtil.slideUp(submenu_, speed, function () {
                                         Plugin.scrollUpdate();
-                                        KTUtil.removeClass(el_, 'sss-menu__item--open');
+                                        KTUtil.removeClass(el_, 'vqn-menu__item--open');
                                     });
                                 }
                             }
@@ -2862,7 +2862,7 @@ var KTMenu = function (elementId, options) {
                         Plugin.eventTrigger('submenuToggle', submenu);
                     });
 
-                    KTUtil.addClass(li, 'sss-menu__item--open');
+                    KTUtil.addClass(li, 'vqn-menu__item--open');
 
                 } else {
                     KTUtil.slideUp(submenu, speed, function () {
@@ -2870,7 +2870,7 @@ var KTMenu = function (elementId, options) {
                         Plugin.eventTrigger('submenuToggle', submenu);
                     });
 
-                    KTUtil.removeClass(li, 'sss-menu__item--open');
+                    KTUtil.removeClass(li, 'vqn-menu__item--open');
                 }
             }
         },
@@ -2893,8 +2893,8 @@ var KTMenu = function (elementId, options) {
         hideSubmenuDropdown: function (item, classAlso) {
             // remove submenu activation class
             if (classAlso) {
-                KTUtil.removeClass(item, 'sss-menu__item--hover');
-                KTUtil.removeClass(item, 'sss-menu__item--active-tab');
+                KTUtil.removeClass(item, 'vqn-menu__item--hover');
+                KTUtil.removeClass(item, 'vqn-menu__item--active-tab');
             }
 
             // clear timeout
@@ -2915,7 +2915,7 @@ var KTMenu = function (elementId, options) {
          */
         hideSubmenuDropdowns: function () {
             var items;
-            if (items = element.querySelectorAll('.sss-menu__item--submenu.sss-menu__item--hover:not(.sss-menu__item--tabs):not([data-ktmenu-submenu-toggle="tab"])')) {
+            if (items = element.querySelectorAll('.vqn-menu__item--submenu.vqn-menu__item--hover:not(.vqn-menu__item--tabs):not([data-ktmenu-submenu-toggle="tab"])')) {
                 for (var j = 0, cnt = items.length; j < cnt; j++) {
                     Plugin.hideSubmenuDropdown(items[j], true);
                 }
@@ -2928,7 +2928,7 @@ var KTMenu = function (elementId, options) {
          */
         showSubmenuDropdown: function (item) {
             // close active submenus
-            var list = element.querySelectorAll('.sss-menu__item--submenu.sss-menu__item--hover, .sss-menu__item--submenu.sss-menu__item--active-tab');
+            var list = element.querySelectorAll('.vqn-menu__item--submenu.vqn-menu__item--hover, .vqn-menu__item--submenu.vqn-menu__item--active-tab');
 
             if (list) {
                 for (var i = 0, len = list.length; i < len; i++) {
@@ -2940,7 +2940,7 @@ var KTMenu = function (elementId, options) {
             }
 
             // add submenu activation class
-            KTUtil.addClass(item, 'sss-menu__item--hover');
+            KTUtil.addClass(item, 'vqn-menu__item--hover');
 
             if (item.getAttribute('data-ktmenu-dropdown-toggle-class')) {
                 KTUtil.addClass(body, item.getAttribute('data-ktmenu-dropdown-toggle-class'));
@@ -2953,9 +2953,9 @@ var KTMenu = function (elementId, options) {
          */
         createSubmenuDropdownClickDropoff: function (el) {
             var query;
-            var zIndex = (query = KTUtil.child(el, '.sss-menu__submenu') ? KTUtil.css(query, 'z-index') : 0) - 1;
+            var zIndex = (query = KTUtil.child(el, '.vqn-menu__submenu') ? KTUtil.css(query, 'z-index') : 0) - 1;
 
-            var dropoff = document.createElement('<div class="sss-menu__dropoff" style="background: transparent; position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: ' + zIndex + '"></div>');
+            var dropoff = document.createElement('<div class="vqn-menu__dropoff" style="background: transparent; position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: ' + zIndex + '"></div>');
 
             body.appendChild(dropoff);
 
@@ -2995,26 +2995,26 @@ var KTMenu = function (elementId, options) {
             var list;
             var parents;
 
-            list = element.querySelectorAll('.sss-menu__item--active');
+            list = element.querySelectorAll('.vqn-menu__item--active');
 
             for (var i = 0, len = list.length; i < len; i++) {
                 var el = list[0];
-                KTUtil.removeClass(el, 'sss-menu__item--active');
-                KTUtil.hide(KTUtil.child(el, '.sss-menu__submenu'));
-                parents = KTUtil.parents(el, '.sss-menu__item--submenu') || [];
+                KTUtil.removeClass(el, 'vqn-menu__item--active');
+                KTUtil.hide(KTUtil.child(el, '.vqn-menu__submenu'));
+                parents = KTUtil.parents(el, '.vqn-menu__item--submenu') || [];
 
                 for (var i_ = 0, len_ = parents.length; i_ < len_; i_++) {
                     var el_ = parents[i];
-                    KTUtil.removeClass(el_, 'sss-menu__item--open');
-                    KTUtil.hide(KTUtil.child(el_, '.sss-menu__submenu'));
+                    KTUtil.removeClass(el_, 'vqn-menu__item--open');
+                    KTUtil.hide(KTUtil.child(el_, '.vqn-menu__submenu'));
                 }
             }
 
             // close open submenus
             if (the.options.accordion.expandAll === false) {
-                if (list = element.querySelectorAll('.sss-menu__item--open')) {
+                if (list = element.querySelectorAll('.vqn-menu__item--open')) {
                     for (var i = 0, len = list.length; i < len; i++) {
-                        KTUtil.removeClass(parents[0], 'sss-menu__item--open');
+                        KTUtil.removeClass(parents[0], 'vqn-menu__item--open');
                     }
                 }
             }
@@ -3028,12 +3028,12 @@ var KTMenu = function (elementId, options) {
             // reset current active item
             Plugin.resetActiveItem();
 
-            var parents = KTUtil.parents(item, '.sss-menu__item--submenu') || [];
+            var parents = KTUtil.parents(item, '.vqn-menu__item--submenu') || [];
             for (var i = 0, len = parents.length; i < len; i++) {
-                KTUtil.addClass(KTUtil.get(parents[i]), 'sss-menu__item--open');
+                KTUtil.addClass(KTUtil.get(parents[i]), 'vqn-menu__item--open');
             }
 
-            KTUtil.addClass(KTUtil.get(item), 'sss-menu__item--active');
+            KTUtil.addClass(KTUtil.get(item), 'vqn-menu__item--active');
         },
 
         /**
@@ -3043,20 +3043,20 @@ var KTMenu = function (elementId, options) {
         getBreadcrumbs: function (item) {
             var query;
             var breadcrumbs = [];
-            var link = KTUtil.child(item, '.sss-menu__link');
+            var link = KTUtil.child(item, '.vqn-menu__link');
 
             breadcrumbs.push({
-                text: (query = KTUtil.child(link, '.sss-menu__link-text') ? query.innerHTML : ''),
+                text: (query = KTUtil.child(link, '.vqn-menu__link-text') ? query.innerHTML : ''),
                 title: link.getAttribute('title'),
                 href: link.getAttribute('href')
             });
 
-            var parents = KTUtil.parents(item, '.sss-menu__item--submenu');
+            var parents = KTUtil.parents(item, '.vqn-menu__item--submenu');
             for (var i = 0, len = parents.length; i < len; i++) {
-                var submenuLink = KTUtil.child(parents[i], '.sss-menu__link');
+                var submenuLink = KTUtil.child(parents[i], '.vqn-menu__link');
 
                 breadcrumbs.push({
-                    text: (query = KTUtil.child(submenuLink, '.sss-menu__link-text') ? query.innerHTML : ''),
+                    text: (query = KTUtil.child(submenuLink, '.vqn-menu__link-text') ? query.innerHTML : ''),
                     title: submenuLink.getAttribute('title'),
                     href: submenuLink.getAttribute('href')
                 });
@@ -3072,7 +3072,7 @@ var KTMenu = function (elementId, options) {
         getPageTitle: function (item) {
             var query;
 
-            return (query = KTUtil.child(item, '.sss-menu__link-text') ? query.innerHTML : '');
+            return (query = KTUtil.child(item, '.vqn-menu__link-text') ? query.innerHTML : '');
         },
 
         /**
@@ -3251,9 +3251,9 @@ var KTMenu = function (elementId, options) {
 document.addEventListener("click", function (e) {
     var body = KTUtil.get('body');
     var query;
-    if (query = body.querySelectorAll('.sss-menu__nav .sss-menu__item.sss-menu__item--submenu.sss-menu__item--hover:not(.sss-menu__item--tabs)[data-ktmenu-submenu-toggle="click"]')) {
+    if (query = body.querySelectorAll('.vqn-menu__nav .vqn-menu__item.vqn-menu__item--submenu.vqn-menu__item--hover:not(.vqn-menu__item--tabs)[data-ktmenu-submenu-toggle="click"]')) {
         for (var i = 0, len = query.length; i < len; i++) {
-            var element = query[i].closest('.sss-menu__nav').parentNode;
+            var element = query[i].closest('.vqn-menu__nav').parentNode;
 
             if (element) {
                 var the = KTUtil.data(element).get('menu');
@@ -3611,13 +3611,13 @@ var KTPortlet = function (elementId, options) {
 
             // merge default and user defined options
             the.options = KTUtil.deepExtend({}, defaultOptions, options);
-            the.head = KTUtil.child(element, '.sss-portlet__head');
-            the.foot = KTUtil.child(element, '.sss-portlet__foot');
+            the.head = KTUtil.child(element, '.vqn-portlet__head');
+            the.foot = KTUtil.child(element, '.vqn-portlet__foot');
 
-            if (KTUtil.child(element, '.sss-portlet__body')) {
-                the.body = KTUtil.child(element, '.sss-portlet__body');
-            } else if (KTUtil.child(element, '.sss-form')) {
-                the.body = KTUtil.child(element, '.sss-form');
+            if (KTUtil.child(element, '.vqn-portlet__body')) {
+                the.body = KTUtil.child(element, '.vqn-portlet__body');
+            } else if (KTUtil.child(element, '.vqn-form')) {
+                the.body = KTUtil.child(element, '.vqn-form');
             }
         },
 
@@ -3687,20 +3687,20 @@ var KTPortlet = function (elementId, options) {
 
             var st = document.documentElement.scrollTop;
 
-            if (st >= offset && KTUtil.hasClass(body, 'sss-portlet--sticky') === false) {
+            if (st >= offset && KTUtil.hasClass(body, 'vqn-portlet--sticky') === false) {
                 Plugin.eventTrigger('stickyOn');
 
-                KTUtil.addClass(body, 'sss-portlet--sticky');
-                KTUtil.addClass(element, 'sss-portlet--sticky');
+                KTUtil.addClass(body, 'vqn-portlet--sticky');
+                KTUtil.addClass(element, 'vqn-portlet--sticky');
 
                 Plugin.updateSticky();
 
-            } else if ((st * 1.5) <= offset && KTUtil.hasClass(body, 'sss-portlet--sticky')) {
+            } else if ((st * 1.5) <= offset && KTUtil.hasClass(body, 'vqn-portlet--sticky')) {
                 // back scroll mode
                 Plugin.eventTrigger('stickyOff');
 
-                KTUtil.removeClass(body, 'sss-portlet--sticky');
-                KTUtil.removeClass(element, 'sss-portlet--sticky');
+                KTUtil.removeClass(body, 'vqn-portlet--sticky');
+                KTUtil.removeClass(element, 'vqn-portlet--sticky');
 
                 Plugin.resetSticky();
             }
@@ -3713,7 +3713,7 @@ var KTPortlet = function (elementId, options) {
 
             var top;
 
-            if (KTUtil.hasClass(body, 'sss-portlet--sticky')) {
+            if (KTUtil.hasClass(body, 'vqn-portlet--sticky')) {
                 if (the.options.sticky.position.top instanceof Function) {
                     top = parseInt(the.options.sticky.position.top.call());
                 } else {
@@ -3746,7 +3746,7 @@ var KTPortlet = function (elementId, options) {
                 return;
             }
 
-            if (KTUtil.hasClass(body, 'sss-portlet--sticky') === false) {
+            if (KTUtil.hasClass(body, 'vqn-portlet--sticky') === false) {
                 KTUtil.css(the.head, 'z-index', '');
                 KTUtil.css(the.head, 'top', '');
                 KTUtil.css(the.head, 'left', '');
@@ -3762,7 +3762,7 @@ var KTPortlet = function (elementId, options) {
                 return;
             }
 
-            if (KTUtil.hasClass(body, 'sss-portlet--fullscreen') && KTUtil.hasClass(element, 'sss-portlet--fullscreen')) {
+            if (KTUtil.hasClass(body, 'vqn-portlet--fullscreen') && KTUtil.hasClass(element, 'vqn-portlet--fullscreen')) {
                 Plugin.fullscreen('off');
             }
 
@@ -3801,8 +3801,8 @@ var KTPortlet = function (elementId, options) {
          */
         setupTooltips: function () {
             if (the.options.tooltips) {
-                var collapsed = KTUtil.hasClass(element, 'sss-portlet--collapse') || KTUtil.hasClass(element, 'sss-portlet--collapsed');
-                var fullscreenOn = KTUtil.hasClass(body, 'sss-portlet--fullscreen') && KTUtil.hasClass(element, 'sss-portlet--fullscreen');
+                var collapsed = KTUtil.hasClass(element, 'vqn-portlet--collapse') || KTUtil.hasClass(element, 'vqn-portlet--collapsed');
+                var fullscreenOn = KTUtil.hasClass(body, 'vqn-portlet--fullscreen') && KTUtil.hasClass(element, 'vqn-portlet--fullscreen');
 
                 //== Remove
                 var remove = KTUtil.find(the.head, '[data-ktportlet-tool=remove]');
@@ -3920,7 +3920,7 @@ var KTPortlet = function (elementId, options) {
          * Toggle
          */
         toggle: function () {
-            if (KTUtil.hasClass(element, 'sss-portlet--collapse') || KTUtil.hasClass(element, 'sss-portlet--collapsed')) {
+            if (KTUtil.hasClass(element, 'vqn-portlet--collapse') || KTUtil.hasClass(element, 'vqn-portlet--collapsed')) {
                 Plugin.expand();
             } else {
                 Plugin.collapse();
@@ -3939,7 +3939,7 @@ var KTPortlet = function (elementId, options) {
                 Plugin.eventTrigger('afterCollapse');
             });
 
-            KTUtil.addClass(element, 'sss-portlet--collapse');
+            KTUtil.addClass(element, 'vqn-portlet--collapse');
 
             var toggle = KTUtil.find(the.head, '[data-ktportlet-tool=toggle]');
             if (toggle && KTUtil.data(toggle).has('tooltip')) {
@@ -3959,8 +3959,8 @@ var KTPortlet = function (elementId, options) {
                 Plugin.eventTrigger('afterExpand');
             });
 
-            KTUtil.removeClass(element, 'sss-portlet--collapse');
-            KTUtil.removeClass(element, 'sss-portlet--collapsed');
+            KTUtil.removeClass(element, 'vqn-portlet--collapse');
+            KTUtil.removeClass(element, 'vqn-portlet--collapsed');
 
             var toggle = KTUtil.find(the.head, '[data-ktportlet-tool=toggle]');
             if (toggle && KTUtil.data(toggle).has('tooltip')) {
@@ -3975,11 +3975,11 @@ var KTPortlet = function (elementId, options) {
             var d = {};
             var speed = 300;
 
-            if (mode === 'off' || (KTUtil.hasClass(body, 'sss-portlet--fullscreen') && KTUtil.hasClass(element, 'sss-portlet--fullscreen'))) {
+            if (mode === 'off' || (KTUtil.hasClass(body, 'vqn-portlet--fullscreen') && KTUtil.hasClass(element, 'vqn-portlet--fullscreen'))) {
                 Plugin.eventTrigger('beforeFullscreenOff');
 
-                KTUtil.removeClass(body, 'sss-portlet--fullscreen');
-                KTUtil.removeClass(element, 'sss-portlet--fullscreen');
+                KTUtil.removeClass(body, 'vqn-portlet--fullscreen');
+                KTUtil.removeClass(element, 'vqn-portlet--fullscreen');
 
                 Plugin.removeTooltips();
                 Plugin.setupTooltips();
@@ -3993,8 +3993,8 @@ var KTPortlet = function (elementId, options) {
             } else {
                 Plugin.eventTrigger('beforeFullscreenOn');
 
-                KTUtil.addClass(element, 'sss-portlet--fullscreen');
-                KTUtil.addClass(body, 'sss-portlet--fullscreen');
+                KTUtil.addClass(element, 'vqn-portlet--fullscreen');
+                KTUtil.addClass(body, 'vqn-portlet--fullscreen');
 
                 Plugin.removeTooltips();
                 Plugin.setupTooltips();
@@ -4205,7 +4205,7 @@ var KTScrolltop = function (elementId, options) {
     var defaultOptions = {
         offset: 300,
         speed: 600,
-        toggleClass: 'sss-scrolltop--on'
+        toggleClass: 'vqn-scrolltop--on'
     };
 
     ////////////////////////////
@@ -5037,7 +5037,7 @@ var KTWizard = function (elementId, options) {
 (function ($) {
 
     var pluginName = 'KTDatatable';
-    var pfx = 'sss-';
+    var pfx = 'vqn-';
     var util = KTUtil;
     var app = KTApp;
 
@@ -8557,7 +8557,7 @@ var KTWizard = function (elementId, options) {
 (function ($) {
 
     var pluginName = 'KTDatatable';
-    var pfx = 'sss-';
+    var pfx = 'vqn-';
 
     $.fn[pluginName] = $.fn[pluginName] || {};
 
@@ -8841,7 +8841,7 @@ $.extend(true, $.fn.KTDatatable.defaults, defaults);
 // Class definition
 var KTChat = function () {
     var initChat = function (parentEl) {
-        var messageListEl = KTUtil.find(parentEl, '.sss-scroll');
+        var messageListEl = KTUtil.find(parentEl, '.vqn-scroll');
 
         if (!messageListEl) {
             return;
@@ -8868,10 +8868,10 @@ var KTChat = function () {
                     return parseInt(KTUtil.attr(messageListEl, 'data-height'));
                 }
 
-                var chatEl = KTUtil.find(parentEl, '.sss-chat');
-                var portletHeadEl = KTUtil.find(parentEl, '.sss-portlet > .sss-portlet__head');
-                var portletBodyEl = KTUtil.find(parentEl, '.sss-portlet > .sss-portlet__body');
-                var portletFootEl = KTUtil.find(parentEl, '.sss-portlet > .sss-portlet__foot');
+                var chatEl = KTUtil.find(parentEl, '.vqn-chat');
+                var portletHeadEl = KTUtil.find(parentEl, '.vqn-portlet > .vqn-portlet__head');
+                var portletBodyEl = KTUtil.find(parentEl, '.vqn-portlet > .vqn-portlet__body');
+                var portletFootEl = KTUtil.find(parentEl, '.vqn-portlet > .vqn-portlet__foot');
 
                 if (KTUtil.isInResponsiveRange('desktop')) {
                     height = KTLayout.getContentHeight();
@@ -8908,26 +8908,26 @@ var KTChat = function () {
 
         // messaging
         var handleMessaging = function () {
-            var scrollEl = KTUtil.find(parentEl, '.sss-scroll');
-            var messagesEl = KTUtil.find(parentEl, '.sss-chat__messages');
-            var textarea = KTUtil.find(parentEl, '.sss-chat__input textarea');
+            var scrollEl = KTUtil.find(parentEl, '.vqn-scroll');
+            var messagesEl = KTUtil.find(parentEl, '.vqn-chat__messages');
+            var textarea = KTUtil.find(parentEl, '.vqn-chat__input textarea');
 
             if (textarea.value.length === 0) {
                 return;
             }
 
             var node = document.createElement("DIV");
-            KTUtil.addClass(node, 'sss-chat__message sss-chat__message--right');
+            KTUtil.addClass(node, 'vqn-chat__message vqn-chat__message--right');
 
             var html =
-                '<div class="sss-chat__user">' +
-                '<span class="sss-chat__datetime">Just now</span>' +
-                '<a href="#" class="sss-chat__username">Jason Muller</span></a>' +
-                '<span class="sss-userpic sss-userpic--circle sss-userpic--sm">' +
+                '<div class="vqn-chat__user">' +
+                '<span class="vqn-chat__datetime">Just now</span>' +
+                '<a href="#" class="vqn-chat__username">Jason Muller</span></a>' +
+                '<span class="vqn-userpic vqn-userpic--circle vqn-userpic--sm">' +
                 '<img src="./assets/media/users/100_12.jpg" alt="image">' +
                 '</span>' +
                 '</div>' +
-                '<div class="sss-chat__text sss-bg-light-brand">' +
+                '<div class="vqn-chat__text vqn-bg-light-brand">' +
                 textarea.value
             '</div>';
 
@@ -8943,17 +8943,17 @@ var KTChat = function () {
 
             setTimeout(function () {
                 var node = document.createElement("DIV");
-                KTUtil.addClass(node, 'sss-chat__message');
+                KTUtil.addClass(node, 'vqn-chat__message');
 
                 var html =
-                    '<div class="sss-chat__user">' +
-                    '<span class="sss-userpic sss-userpic--circle sss-userpic--sm">' +
+                    '<div class="vqn-chat__user">' +
+                    '<span class="vqn-userpic vqn-userpic--circle vqn-userpic--sm">' +
                     '<img src="./assets/media/users/100_13.jpg" alt="image">' +
                     '</span>' +
-                    '<a href="#" class="sss-chat__username">Max Born</span></a>' +
-                    '<span class="sss-chat__datetime">Just now</span>' +
+                    '<a href="#" class="vqn-chat__username">Max Born</span></a>' +
+                    '<span class="vqn-chat__datetime">Just now</span>' +
                     '</div>' +
-                    '<div class="sss-chat__text sss-bg-light-success">' +
+                    '<div class="vqn-chat__text vqn-bg-light-success">' +
                     'Right before vacation season we have the next Big Deal for you. <br>Book the car of your dreams and save up to <b>25%*</b> worldwide.'
                 '</div>';
 
@@ -8970,7 +8970,7 @@ var KTChat = function () {
         }
 
         // attach events
-        KTUtil.on(parentEl, '.sss-chat__input textarea', 'keydown', function (e) {
+        KTUtil.on(parentEl, '.vqn-chat__input textarea', 'keydown', function (e) {
             if (e.keyCode == 13) {
                 handleMessaging();
                 e.preventDefault();
@@ -8979,7 +8979,7 @@ var KTChat = function () {
             }
         });
 
-        KTUtil.on(parentEl, '.sss-chat__input .sss-chat__reply', 'click', function (e) {
+        KTUtil.on(parentEl, '.vqn-chat__input .vqn-chat__reply', 'click', function (e) {
             handleMessaging();
         });
     }
@@ -9014,13 +9014,13 @@ var KTDemoPanel = function () {
     var init = function () {
         offcanvas = new KTOffcanvas(demoPanel, {
             overlay: true,
-            baseClass: 'sss-demo-panel',
+            baseClass: 'vqn-demo-panel',
             closeBy: 'sss_demo_panel_close',
             toggleBy: 'sss_demo_panel_toggle'
         });
 
-        var head = KTUtil.find(demoPanel, '.sss-demo-panel__head');
-        var body = KTUtil.find(demoPanel, '.sss-demo-panel__body');
+        var head = KTUtil.find(demoPanel, '.vqn-demo-panel__head');
+        var body = KTUtil.find(demoPanel, '.vqn-demo-panel__body');
 
         KTUtil.scrollInit(body, {
             disableForMobile: true,
@@ -9083,12 +9083,12 @@ var KTOffcanvasPanel = function () {
     var searchPanel = KTUtil.get('sss_offcanvas_toolbar_search');
 
     var initNotifications = function () {
-        var head = KTUtil.find(notificationPanel, '.sss-offcanvas-panel__head');
-        var body = KTUtil.find(notificationPanel, '.sss-offcanvas-panel__body');
+        var head = KTUtil.find(notificationPanel, '.vqn-offcanvas-panel__head');
+        var body = KTUtil.find(notificationPanel, '.vqn-offcanvas-panel__body');
 
         var offcanvas = new KTOffcanvas(notificationPanel, {
             overlay: true,
-            baseClass: 'sss-offcanvas-panel',
+            baseClass: 'vqn-offcanvas-panel',
             closeBy: 'sss_offcanvas_toolbar_notifications_close',
             toggleBy: 'sss_offcanvas_toolbar_notifications_toggler_btn'
         });
@@ -9114,12 +9114,12 @@ var KTOffcanvasPanel = function () {
     }
 
     var initQucikActions = function () {
-        var head = KTUtil.find(quickActionsPanel, '.sss-offcanvas-panel__head');
-        var body = KTUtil.find(quickActionsPanel, '.sss-offcanvas-panel__body');
+        var head = KTUtil.find(quickActionsPanel, '.vqn-offcanvas-panel__head');
+        var body = KTUtil.find(quickActionsPanel, '.vqn-offcanvas-panel__body');
 
         var offcanvas = new KTOffcanvas(quickActionsPanel, {
             overlay: true,
-            baseClass: 'sss-offcanvas-panel',
+            baseClass: 'vqn-offcanvas-panel',
             closeBy: 'sss_offcanvas_toolbar_quick_actions_close',
             toggleBy: 'sss_offcanvas_toolbar_quick_actions_toggler_btn'
         });
@@ -9145,12 +9145,12 @@ var KTOffcanvasPanel = function () {
     }
 
     var initProfile = function () {
-        var head = KTUtil.find(profilePanel, '.sss-offcanvas-panel__head');
-        var body = KTUtil.find(profilePanel, '.sss-offcanvas-panel__body');
+        var head = KTUtil.find(profilePanel, '.vqn-offcanvas-panel__head');
+        var body = KTUtil.find(profilePanel, '.vqn-offcanvas-panel__body');
 
         var offcanvas = new KTOffcanvas(profilePanel, {
             overlay: true,
-            baseClass: 'sss-offcanvas-panel',
+            baseClass: 'vqn-offcanvas-panel',
             closeBy: 'sss_offcanvas_toolbar_profile_close',
             toggleBy: 'sss_offcanvas_toolbar_profile_toggler_btn'
         });
@@ -9176,12 +9176,12 @@ var KTOffcanvasPanel = function () {
     }
 
     var initSearch = function () {
-        var head = KTUtil.find(searchPanel, '.sss-offcanvas-panel__head');
-        var body = KTUtil.find(searchPanel, '.sss-offcanvas-panel__body');
+        var head = KTUtil.find(searchPanel, '.vqn-offcanvas-panel__head');
+        var body = KTUtil.find(searchPanel, '.vqn-offcanvas-panel__body');
 
         var offcanvas = new KTOffcanvas(searchPanel, {
             overlay: true,
-            baseClass: 'sss-offcanvas-panel',
+            baseClass: 'vqn-offcanvas-panel',
             closeBy: 'sss_offcanvas_toolbar_search_close',
             toggleBy: 'sss_offcanvas_toolbar_search_toggler_btn'
         });
@@ -9229,8 +9229,8 @@ var KTQuickPanel = function () {
 
     var getContentHeight = function () {
         var height;
-        var nav = KTUtil.find(panel, '.sss-quick-panel__nav');
-        var content = KTUtil.find(panel, '.sss-quick-panel__content');
+        var nav = KTUtil.find(panel, '.vqn-quick-panel__nav');
+        var content = KTUtil.find(panel, '.vqn-quick-panel__content');
 
         height = parseInt(KTUtil.getViewPort().height) - parseInt(KTUtil.actualHeight(nav)) - (2 * parseInt(KTUtil.css(nav, 'padding-top'))) - 10;
 
@@ -9240,7 +9240,7 @@ var KTQuickPanel = function () {
     var initOffcanvas = function () {
         var offcanvas = new KTOffcanvas(panel, {
             overlay: true,
-            baseClass: 'sss-quick-panel',
+            baseClass: 'vqn-quick-panel',
             closeBy: 'sss_quick_panel_close_btn',
             toggleBy: 'sss_quick_panel_toggler_btn'
         });
@@ -9318,8 +9318,8 @@ var KTQuickSearch = function () {
     var timeout = false;
     var isProcessing = false;
     var requestTimeout = 200; // ajax request fire timeout in milliseconds 
-    var spinnerClass = 'sss-spinner sss-spinner--input sss-spinner--sm sss-spinner--brand sss-spinner--right';
-    var resultClass = 'sss-quick-search--has-result';
+    var spinnerClass = 'vqn-spinner vqn-spinner--input vqn-spinner--sm vqn-spinner--brand vqn-spinner--right';
+    var resultClass = 'vqn-quick-search--has-result';
     var minLength = 2;
 
     var showProgress = function () {
@@ -9391,7 +9391,7 @@ var KTQuickSearch = function () {
                     hasResult = false;
                     hideProgress();
                     KTUtil.addClass(target, resultClass);
-                    KTUtil.setHTML(resultWrapper, '<span class="sss-quick-search__message">Connection error. Pleae try again later.</div>');
+                    KTUtil.setHTML(resultWrapper, '<span class="vqn-quick-search__message">Connection error. Pleae try again later.</div>');
                     showDropdown();
                     KTUtil.scrollUpdate(resultWrapper);
                 }
@@ -9433,10 +9433,10 @@ var KTQuickSearch = function () {
         init: function (element) {
             // Init
             target = element;
-            form = KTUtil.find(target, '.sss-quick-search__form');
-            input = KTUtil.find(target, '.sss-quick-search__input');
-            closeIcon = KTUtil.find(target, '.sss-quick-search__close');
-            resultWrapper = KTUtil.find(target, '.sss-quick-search__wrapper');
+            form = KTUtil.find(target, '.vqn-quick-search__form');
+            input = KTUtil.find(target, '.vqn-quick-search__input');
+            closeIcon = KTUtil.find(target, '.vqn-quick-search__close');
+            resultWrapper = KTUtil.find(target, '.vqn-quick-search__wrapper');
             resultDropdown = KTUtil.find(target, '.dropdown-menu');
             resultDropdownToggle = KTUtil.find(target, '[data-toggle="dropdown"]');
             inputGroup = KTUtil.find(target, '.input-group');
@@ -9510,7 +9510,7 @@ var KTLayout = function () {
             minimize: {
                 mobile: false,
                 desktop: {
-                    on: 'sss-header--minimize'
+                    on: 'vqn-header--minimize'
                 }
             }
         };
@@ -9533,11 +9533,11 @@ var KTLayout = function () {
         // init aside left offcanvas
         headerMenuOffcanvas = new KTOffcanvas('sss_header_menu_wrapper', {
             overlay: true,
-            baseClass: 'sss-header-menu-wrapper',
+            baseClass: 'vqn-header-menu-wrapper',
             closeBy: 'sss_header_menu_mobile_close_btn',
             toggleBy: {
                 target: 'sss_header_mobile_toggler',
-                state: 'sss-header-mobile__toolbar-toggler--active'
+                state: 'vqn-header-mobile__toolbar-toggler--active'
             }
         });
 
@@ -9558,8 +9558,8 @@ var KTLayout = function () {
     var initHeaderTopbar = function () {
         mobileHeaderTopbarToggle = new KTToggle('sss_header_mobile_topbar_toggler', {
             target: 'body',
-            targetState: 'sss-header__topbar--mobile-on',
-            togglerState: 'sss-header-mobile__toolbar-topbar-toggler--active'
+            targetState: 'vqn-header__topbar--mobile-on',
+            togglerState: 'vqn-header-mobile__toolbar-topbar-toggler--active'
         });
     }
 
@@ -9569,7 +9569,7 @@ var KTLayout = function () {
         var asidBrandHover = false;
         var aside = KTUtil.get('sss_aside');
         var asideBrand = KTUtil.get('sss_aside_brand');
-        var asideOffcanvasClass = KTUtil.hasClass(aside, 'sss-aside--offcanvas-default') ? 'sss-aside--offcanvas-default' : 'sss-aside';
+        var asideOffcanvasClass = KTUtil.hasClass(aside, 'vqn-aside--offcanvas-default') ? 'vqn-aside--offcanvas-default' : 'vqn-aside';
 
         asideMenuOffcanvas = new KTOffcanvas('sss_aside', {
             baseClass: asideOffcanvasClass,
@@ -9577,12 +9577,12 @@ var KTLayout = function () {
             closeBy: 'sss_aside_close_btn',
             toggleBy: {
                 target: 'sss_aside_mobile_toggler',
-                state: 'sss-header-mobile__toolbar-toggler--active'
+                state: 'vqn-header-mobile__toolbar-toggler--active'
             }
         });
 
         // Handle minimzied aside hover
-        if (KTUtil.hasClass(body, 'sss-aside--fixed')) {
+        if (KTUtil.hasClass(body, 'vqn-aside--fixed')) {
             var insideTm;
             var outsideTm;
 
@@ -9599,17 +9599,17 @@ var KTLayout = function () {
                 }
 
                 insideTm = setTimeout(function () {
-                    if (KTUtil.hasClass(body, 'sss-aside--minimize') && KTUtil.isInResponsiveRange('desktop')) {
-                        KTUtil.removeClass(body, 'sss-aside--minimize');
+                    if (KTUtil.hasClass(body, 'vqn-aside--minimize') && KTUtil.isInResponsiveRange('desktop')) {
+                        KTUtil.removeClass(body, 'vqn-aside--minimize');
 
                         // Minimizing class
-                        KTUtil.addClass(body, 'sss-aside--minimizing');
+                        KTUtil.addClass(body, 'vqn-aside--minimizing');
                         KTUtil.transitionEnd(body, function () {
-                            KTUtil.removeClass(body, 'sss-aside--minimizing');
+                            KTUtil.removeClass(body, 'vqn-aside--minimizing');
                         });
 
                         // Hover class
-                        KTUtil.addClass(body, 'sss-aside--minimize-hover');
+                        KTUtil.addClass(body, 'vqn-aside--minimize-hover');
                         asideMenu.scrollUpdate();
                         asideMenu.scrollTop();
                     }
@@ -9629,14 +9629,14 @@ var KTLayout = function () {
                 }
 
                 outsideTm = setTimeout(function () {
-                    if (KTUtil.hasClass(body, 'sss-aside--minimize-hover') && KTUtil.isInResponsiveRange('desktop')) {
-                        KTUtil.removeClass(body, 'sss-aside--minimize-hover');
-                        KTUtil.addClass(body, 'sss-aside--minimize');
+                    if (KTUtil.hasClass(body, 'vqn-aside--minimize-hover') && KTUtil.isInResponsiveRange('desktop')) {
+                        KTUtil.removeClass(body, 'vqn-aside--minimize-hover');
+                        KTUtil.addClass(body, 'vqn-aside--minimize');
 
                         // Minimizing class
-                        KTUtil.addClass(body, 'sss-aside--minimizing');
+                        KTUtil.addClass(body, 'vqn-aside--minimizing');
                         KTUtil.transitionEnd(body, function () {
-                            KTUtil.removeClass(body, 'sss-aside--minimizing');
+                            KTUtil.removeClass(body, 'vqn-aside--minimizing');
                         });
 
                         // Hover class
@@ -9768,7 +9768,7 @@ var KTLayout = function () {
             this.initPageStickyPortlet();
 
             // Non functional links notice(can be removed in production)
-            $('#sss_aside_menu, #sss_header_menu').on('click', '.sss-menu__link[href="#"]', function () {
+            $('#sss_aside_menu, #sss_header_menu').on('click', '.vqn-menu__link[href="#"]', function () {
                 if (location.hostname.match('keenthemes.com')) {
                     swal.fire("You have clicked on a dummy link!", "To browse the theme features please refer to the header menu.", "warning");
                 } else {

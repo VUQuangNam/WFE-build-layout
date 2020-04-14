@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
-    selector: '.sss-container .sss-body .sss-grid .sss-grid--ver',
+    selector: '.vqn-container .vqn-body .vqn-grid .vqn-grid--ver',
     templateUrl: './dashboard.component.html',
     encapsulation: ViewEncapsulation.None,
     providers: []

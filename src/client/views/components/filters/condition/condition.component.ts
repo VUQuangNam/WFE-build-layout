@@ -7,7 +7,7 @@ import { ServiceClient } from 'src/client/services';
 declare let swal: any;
 
 @Component({
-    selector: 'sss-search-filter-group',
+    selector: 'vqn-search-filter-group',
     templateUrl: './condition.component.html',
     encapsulation: ViewEncapsulation.None,
     providers: [
