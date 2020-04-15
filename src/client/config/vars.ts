@@ -71,74 +71,24 @@ export class VariableConfig {
         ];
     }
 
-    /**
-     * Load material append to model.
-     */
-    loadMaterialTypes = () => {
-        return [
-            {
-                id: 'fabric',
-                name: 'Vải'
-            },
-            {
-                id: 'button',
-                name: 'Khuy áo'
-            }
-        ];
-    }
-
     /** Load item Material */
     loadMaterialItem = () => {
         return [
             {
-                id: 'bộ',
+                id: 'Bộ',
                 name: 'Bộ'
             },
             {
-                id: 'cái',
+                id: 'Cái',
                 name: 'Cái'
             },
             {
-                id: 'chiếc',
+                id: 'Chiếc',
                 name: 'Chiếc'
             },
             {
-                id: 'đôi',
+                id: 'Đôi',
                 name: 'Đôi'
-            }
-        ];
-    }
-
-    loadProductType = () => {
-        return [
-            {
-                id: 'tailor',
-                name: 'Sản phẩm may đo'
-            },
-            {
-                id: 'available',
-                name: 'Sản phẩm bán sẵn'
-            },
-            {
-                id: 'warranty',
-                name: 'Sản phẩm bảo hành'
-            },
-            {
-                id: 'repair',
-                name: 'Sản phẩm sửa chữa'
-            }
-        ];
-    }
-
-    loadBrand = () => {
-        return [
-            {
-                id: 'vqn',
-                name: 'vqn'
-            },
-            {
-                id: 'duynguyen',
-                name: 'Duy Nguyễn'
             }
         ];
     }

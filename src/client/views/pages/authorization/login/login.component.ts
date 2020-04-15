@@ -6,7 +6,8 @@ import {
 
 import * as moment from 'moment-timezone';
 import { Utilities } from 'src/client/utils';
-import { AuthService } from '../../../../services';
+import { AuthService, ScriptLoaderService } from '../../../../services';
+
 
 /** private variable */
 declare let swal: any;
@@ -24,19 +25,39 @@ declare let swal: any;
 export class LoginComponent implements OnInit {
     constructor(
         private authService: AuthService,
+        private scriptService: ScriptLoaderService,
         private utilities: Utilities
     ) { }
 
     /** variable */
     model: any = {};
+    modelSignUp: any = {};
     invalid = true;
+    isSignin = false;
+    loading = false;
 
     ngOnInit() {
+        this.scriptService.loadScripts('body', [
+            /** begin::Global Theme Bundle(used by all pages) */
+            '/assets/vendors/global/vendors.bundle.js',
+            // '/assets/jquery/bundles/scripts.bundle.js',
+            /** end::Global Theme Bundle(used by all pages) */
+
+            /** begin::Page Vendors(used by this page) */
+            // '/assets/vendors/custom/fullcalendar/fullcalendar.bundle.js',
+            /** end::Page Vendors */
+
+            /** * begin::Page Scripts(used by this page)  */
+            // '/assets/jquery/bundles/pages/dashboard.js',
+            /** * end::Page Scripts(used by this page)  */
+        ], true).then(result => {
+            // do something here
+        });
         const ascessToken = this.utilities.getCookie('DN_ACCESS_TOKEN');
         if (ascessToken) return window.location.href = '/';
     }
 
-    async login(f: any) {
+    login = async (f: any) => {
         try {
             this.invalid = f.valid;
             if (!this.invalid) return;
@@ -69,6 +90,29 @@ export class LoginComponent implements OnInit {
             /** begin:: write log ex here: break */
             throw new Error(ex);
         }
+    }
+
+    signUp = async () => {
+        swal.fire({
+            title: 'Thêm Mới Khách Hàng',
+            text: 'Bạn có chắc chắn rằng mình muốn thêm mới khách hàng này.?',
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Tôi đồng ý!',
+            cancelButtonText: 'Từ bỏ!'
+        }).then(async result => {
+            try {
+                if (result.value) {
+                    this.loading = true;
+                    swal.fire('Hệ Thống', 'Đăng ký thành công.!', 'success');
+                }
+            } catch (error) {
+                console.log(error);
+            } finally {
+                this.loading = false;
+            }
+        });
+
     }
 
 }

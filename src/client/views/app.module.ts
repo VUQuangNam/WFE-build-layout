@@ -16,7 +16,6 @@ import {
     DateTimeConfig,
     CurrencyConfig,
     DataTableConfig,
-    TailorDesignConfig,
     VariableConfig,
     FilterGroup
 } from '../config';
@@ -40,7 +39,6 @@ import {
         DateTimeConfig,
         CurrencyConfig,
         DataTableConfig,
-        TailorDesignConfig,
         ScriptLoaderService,
         VariableConfig,
         FilterGroup,

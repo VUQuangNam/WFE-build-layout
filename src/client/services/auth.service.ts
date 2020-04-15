@@ -10,7 +10,7 @@ export class AuthService {
         private headerConfig: HeaderConfig
     ) { }
     /**
-     * Login with dunnio account
+     * Login with sss account
      *
      * @param username
      * @param password
@@ -26,7 +26,7 @@ export class AuthService {
     }
 
     /**
-     * Logout from dunnio
+     * Logout from sss
      */
     logout() {
         return this.http.post(
