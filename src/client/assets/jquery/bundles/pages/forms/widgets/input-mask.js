@@ -5,51 +5,51 @@ var KTInputmask = function () {
     // Private functions
     var demos = function () {
         // date format
-        $("#sss_inputmask_1").inputmask("99/99/9999", {
+        $("#vqn_inputmask_1").inputmask("99/99/9999", {
             "placeholder": "mm/dd/yyyy",
             autoUnmask: true
         });
 
         // custom placeholder        
-        $("#sss_inputmask_2").inputmask("99/99/9999", {
+        $("#vqn_inputmask_2").inputmask("99/99/9999", {
             "placeholder": "mm/dd/yyyy",
         });
 
         // phone number format
-        $("#sss_inputmask_3").inputmask("mask", {
+        $("#vqn_inputmask_3").inputmask("mask", {
             "mask": "(999) 999-9999"
         });
 
         // empty placeholder
-        $("#sss_inputmask_4").inputmask({
+        $("#vqn_inputmask_4").inputmask({
             "mask": "99-9999999",
             placeholder: "" // remove underscores from the input mask
         });
 
         // repeating mask
-        $("#sss_inputmask_5").inputmask({
+        $("#vqn_inputmask_5").inputmask({
             "mask": "9",
             "repeat": 10,
             "greedy": false
         }); // ~ mask "9" or mask "99" or ... mask "9999999999"
 
         // decimal format
-        $("#sss_inputmask_6").inputmask('decimal', {
+        $("#vqn_inputmask_6").inputmask('decimal', {
             rightAlignNumerics: false
         });
 
         // currency format
-        $("#sss_inputmask_7").inputmask('€ 999.999.999,99', {
+        $("#vqn_inputmask_7").inputmask('€ 999.999.999,99', {
             numericInput: true
         }); //123456  =>  € ___.__1.234,56
 
         //ip address
-        $("#sss_inputmask_8").inputmask({
+        $("#vqn_inputmask_8").inputmask({
             "mask": "999.999.999.999"
         });
 
         //email address
-        $("#sss_inputmask_9").inputmask({
+        $("#vqn_inputmask_9").inputmask({
             mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
             greedy: false,
             onBeforePaste: function (pastedValue, opts) {

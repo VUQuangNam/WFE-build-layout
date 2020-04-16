@@ -40520,13 +40520,13 @@ body.swal2-height-auto {
     align-items: center;
 }
 
-.vqn-chat .vqn-chat__input .vqn-chat__toolbar .sss_chat__tools a i {
+.vqn-chat .vqn-chat__input .vqn-chat__toolbar .vqn_chat__tools a i {
     margin-right: 1.1rem;
     color: #cdd1e9;
     font-size: 1.4rem;
 }
 
-.vqn-chat .vqn-chat__input .vqn-chat__toolbar .sss_chat__tools a i:hover {
+.vqn-chat .vqn-chat__input .vqn-chat__toolbar .vqn_chat__tools a i:hover {
     color: #374afb;
     -webkit-transition: color 0.3s ease;
     transition: color 0.3s ease;
@@ -40556,7 +40556,7 @@ body.swal2-height-auto {
         margin-top: 0.75rem;
     }
 
-    .vqn-chat .vqn-chat__input .vqn-chat__toolbar .sss_chat__tools a i {
+    .vqn-chat .vqn-chat__input .vqn-chat__toolbar .vqn_chat__tools a i {
         margin-right: 0.75rem;
         font-size: 1.3rem;
     }

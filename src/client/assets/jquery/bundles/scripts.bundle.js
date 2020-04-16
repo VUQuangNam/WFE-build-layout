@@ -8988,11 +8988,11 @@ var KTChat = function () {
         // public functions
         init: function () {
             // init modal chat example
-            initChat(KTUtil.getByID('sss_chat_modal'));
+            initChat(KTUtil.getByID('vqn_chat_modal'));
 
             // trigger click to show popup modal chat on page load
             setTimeout(function () {
-                //KTUtil.getByID('sss_app_chat_launch_btn').click();
+                //KTUtil.getByID('vqn_app_chat_launch_btn').click();
             }, 1000);
         },
 
@@ -9008,15 +9008,15 @@ KTUtil.ready(function () {
 "use strict";
 
 var KTDemoPanel = function () {
-    var demoPanel = KTUtil.getByID('sss_demo_panel');
+    var demoPanel = KTUtil.getByID('vqn_demo_panel');
     var offcanvas;
 
     var init = function () {
         offcanvas = new KTOffcanvas(demoPanel, {
             overlay: true,
             baseClass: 'vqn-demo-panel',
-            closeBy: 'sss_demo_panel_close',
-            toggleBy: 'sss_demo_panel_toggle'
+            closeBy: 'vqn_demo_panel_close',
+            toggleBy: 'vqn_demo_panel_toggle'
         });
 
         var head = KTUtil.find(demoPanel, '.vqn-demo-panel__head');
@@ -9044,7 +9044,7 @@ var KTDemoPanel = function () {
         if (typeof offcanvas !== 'undefined' && offcanvas.length === 0) {
             offcanvas.on('hide', function () {
                 var expires = new Date(new Date().getTime() + 60 * 60 * 1000); // expire in 60 minutes from now
-                Cookies.set('sss_demo_panel_shown', 1, { expires: expires });
+                Cookies.set('vqn_demo_panel_shown', 1, { expires: expires });
             });
         }
     }
@@ -9055,9 +9055,9 @@ var KTDemoPanel = function () {
         }
 
         setTimeout(function () {
-            if (!Cookies.get('sss_demo_panel_shown')) {
+            if (!Cookies.get('vqn_demo_panel_shown')) {
                 var expires = new Date(new Date().getTime() + 15 * 60 * 1000); // expire in 15 minutes from now
-                Cookies.set('sss_demo_panel_shown', 1, { expires: expires });
+                Cookies.set('vqn_demo_panel_shown', 1, { expires: expires });
                 offcanvas.show();
             }
         }, 4000);
@@ -9077,10 +9077,10 @@ $(document).ready(function () {
 "use strict";
 
 var KTOffcanvasPanel = function () {
-    var notificationPanel = KTUtil.get('sss_offcanvas_toolbar_notifications');
-    var quickActionsPanel = KTUtil.get('sss_offcanvas_toolbar_quick_actions');
-    var profilePanel = KTUtil.get('sss_offcanvas_toolbar_profile');
-    var searchPanel = KTUtil.get('sss_offcanvas_toolbar_search');
+    var notificationPanel = KTUtil.get('vqn_offcanvas_toolbar_notifications');
+    var quickActionsPanel = KTUtil.get('vqn_offcanvas_toolbar_quick_actions');
+    var profilePanel = KTUtil.get('vqn_offcanvas_toolbar_profile');
+    var searchPanel = KTUtil.get('vqn_offcanvas_toolbar_search');
 
     var initNotifications = function () {
         var head = KTUtil.find(notificationPanel, '.vqn-offcanvas-panel__head');
@@ -9089,8 +9089,8 @@ var KTOffcanvasPanel = function () {
         var offcanvas = new KTOffcanvas(notificationPanel, {
             overlay: true,
             baseClass: 'vqn-offcanvas-panel',
-            closeBy: 'sss_offcanvas_toolbar_notifications_close',
-            toggleBy: 'sss_offcanvas_toolbar_notifications_toggler_btn'
+            closeBy: 'vqn_offcanvas_toolbar_notifications_close',
+            toggleBy: 'vqn_offcanvas_toolbar_notifications_toggler_btn'
         });
 
         KTUtil.scrollInit(body, {
@@ -9120,8 +9120,8 @@ var KTOffcanvasPanel = function () {
         var offcanvas = new KTOffcanvas(quickActionsPanel, {
             overlay: true,
             baseClass: 'vqn-offcanvas-panel',
-            closeBy: 'sss_offcanvas_toolbar_quick_actions_close',
-            toggleBy: 'sss_offcanvas_toolbar_quick_actions_toggler_btn'
+            closeBy: 'vqn_offcanvas_toolbar_quick_actions_close',
+            toggleBy: 'vqn_offcanvas_toolbar_quick_actions_toggler_btn'
         });
 
         KTUtil.scrollInit(body, {
@@ -9151,8 +9151,8 @@ var KTOffcanvasPanel = function () {
         var offcanvas = new KTOffcanvas(profilePanel, {
             overlay: true,
             baseClass: 'vqn-offcanvas-panel',
-            closeBy: 'sss_offcanvas_toolbar_profile_close',
-            toggleBy: 'sss_offcanvas_toolbar_profile_toggler_btn'
+            closeBy: 'vqn_offcanvas_toolbar_profile_close',
+            toggleBy: 'vqn_offcanvas_toolbar_profile_toggler_btn'
         });
 
         KTUtil.scrollInit(body, {
@@ -9182,8 +9182,8 @@ var KTOffcanvasPanel = function () {
         var offcanvas = new KTOffcanvas(searchPanel, {
             overlay: true,
             baseClass: 'vqn-offcanvas-panel',
-            closeBy: 'sss_offcanvas_toolbar_search_close',
-            toggleBy: 'sss_offcanvas_toolbar_search_toggler_btn'
+            closeBy: 'vqn_offcanvas_toolbar_search_close',
+            toggleBy: 'vqn_offcanvas_toolbar_search_toggler_btn'
         });
 
         KTUtil.scrollInit(body, {
@@ -9222,10 +9222,10 @@ $(document).ready(function () {
 "use strict";
 
 var KTQuickPanel = function () {
-    var panel = KTUtil.get('sss_quick_panel');
-    var notificationPanel = KTUtil.get('sss_quick_panel_tab_notifications');
-    var logsPanel = KTUtil.get('sss_quick_panel_tab_logs');
-    var settingsPanel = KTUtil.get('sss_quick_panel_tab_settings');
+    var panel = KTUtil.get('vqn_quick_panel');
+    var notificationPanel = KTUtil.get('vqn_quick_panel_tab_notifications');
+    var logsPanel = KTUtil.get('vqn_quick_panel_tab_logs');
+    var settingsPanel = KTUtil.get('vqn_quick_panel_tab_settings');
 
     var getContentHeight = function () {
         var height;
@@ -9241,8 +9241,8 @@ var KTQuickPanel = function () {
         var offcanvas = new KTOffcanvas(panel, {
             overlay: true,
             baseClass: 'vqn-quick-panel',
-            closeBy: 'sss_quick_panel_close_btn',
-            toggleBy: 'sss_quick_panel_toggler_btn'
+            closeBy: 'vqn_quick_panel_close_btn',
+            toggleBy: 'vqn_quick_panel_toggler_btn'
         });
     }
 
@@ -9456,7 +9456,7 @@ var KTQuickSearch = function () {
             KTUtil.addEvent(closeIcon, 'click', handleCancel);
 
             // Auto-focus on the form input on dropdown form open
-            var toggle = KTUtil.getByID('sss_quick_search_toggle');
+            var toggle = KTUtil.getByID('vqn_quick_search_toggle');
             if (toggle) {
                 $(toggle).on('shown.bs.dropdown', function () {
                     input.focus();
@@ -9469,12 +9469,12 @@ var KTQuickSearch = function () {
 var KTQuickSearchMobile = KTQuickSearch;
 
 $(document).ready(function () {
-    if (KTUtil.get('sss_quick_search_default')) {
-        KTQuickSearch().init(KTUtil.get('sss_quick_search_default'));
+    if (KTUtil.get('vqn_quick_search_default')) {
+        KTQuickSearch().init(KTUtil.get('vqn_quick_search_default'));
     }
 
-    if (KTUtil.get('sss_quick_search_inline')) {
-        KTQuickSearchMobile().init(KTUtil.get('sss_quick_search_inline'));
+    if (KTUtil.get('vqn_quick_search_inline')) {
+        KTQuickSearchMobile().init(KTUtil.get('vqn_quick_search_inline'));
     }
 });
 "use strict";
@@ -9497,7 +9497,7 @@ var KTLayout = function () {
     // Header
     var initHeader = function () {
         var tmp;
-        var headerEl = KTUtil.get('sss_header');
+        var headerEl = KTUtil.get('vqn_header');
 
         var options = {
             classic: {
@@ -9515,7 +9515,7 @@ var KTLayout = function () {
             }
         };
 
-        header = new KTHeader('sss_header', options);
+        header = new KTHeader('vqn_header', options);
 
         // if (asideMenu) {
         //     header.on('minimizeOn', function() {
@@ -9531,17 +9531,17 @@ var KTLayout = function () {
     // Header Menu
     var initHeaderMenu = function () {
         // init aside left offcanvas
-        headerMenuOffcanvas = new KTOffcanvas('sss_header_menu_wrapper', {
+        headerMenuOffcanvas = new KTOffcanvas('vqn_header_menu_wrapper', {
             overlay: true,
             baseClass: 'vqn-header-menu-wrapper',
-            closeBy: 'sss_header_menu_mobile_close_btn',
+            closeBy: 'vqn_header_menu_mobile_close_btn',
             toggleBy: {
-                target: 'sss_header_mobile_toggler',
+                target: 'vqn_header_mobile_toggler',
                 state: 'vqn-header-mobile__toolbar-toggler--active'
             }
         });
 
-        headerMenu = new KTMenu('sss_header_menu', {
+        headerMenu = new KTMenu('vqn_header_menu', {
             submenu: {
                 desktop: 'dropdown',
                 tablet: 'accordion',
@@ -9556,7 +9556,7 @@ var KTLayout = function () {
 
     // Header Topbar
     var initHeaderTopbar = function () {
-        mobileHeaderTopbarToggle = new KTToggle('sss_header_mobile_topbar_toggler', {
+        mobileHeaderTopbarToggle = new KTToggle('vqn_header_mobile_topbar_toggler', {
             target: 'body',
             targetState: 'vqn-header__topbar--mobile-on',
             togglerState: 'vqn-header-mobile__toolbar-topbar-toggler--active'
@@ -9567,16 +9567,16 @@ var KTLayout = function () {
     var initAside = function () {
         // init aside left offcanvas
         var asidBrandHover = false;
-        var aside = KTUtil.get('sss_aside');
-        var asideBrand = KTUtil.get('sss_aside_brand');
+        var aside = KTUtil.get('vqn_aside');
+        var asideBrand = KTUtil.get('vqn_aside_brand');
         var asideOffcanvasClass = KTUtil.hasClass(aside, 'vqn-aside--offcanvas-default') ? 'vqn-aside--offcanvas-default' : 'vqn-aside';
 
-        asideMenuOffcanvas = new KTOffcanvas('sss_aside', {
+        asideMenuOffcanvas = new KTOffcanvas('vqn_aside', {
             baseClass: asideOffcanvasClass,
             overlay: true,
-            closeBy: 'sss_aside_close_btn',
+            closeBy: 'vqn_aside_close_btn',
             toggleBy: {
-                target: 'sss_aside_mobile_toggler',
+                target: 'vqn_aside_mobile_toggler',
                 state: 'vqn-header-mobile__toolbar-toggler--active'
             }
         });
@@ -9651,7 +9651,7 @@ var KTLayout = function () {
     // Aside menu
     var initAsideMenu = function () {
         // Init aside menu
-        var menu = KTUtil.get('sss_aside_menu');
+        var menu = KTUtil.get('vqn_aside_menu');
         var menuDesktopMode = (KTUtil.attr(menu, 'data-ktmenu-dropdown') === '1' ? 'dropdown' : 'accordion');
 
         // Init scrollable menu container
@@ -9663,7 +9663,7 @@ var KTLayout = function () {
                     var height;
 
                     if (KTUtil.isInResponsiveRange('desktop')) {
-                        height = parseInt(KTUtil.getViewPort().height) - parseInt(KTUtil.actualHeight('sss_header', false));
+                        height = parseInt(KTUtil.getViewPort().height) - parseInt(KTUtil.actualHeight('vqn_header', false));
                         height = height - parseInt(KTUtil.css(menu, 'marginTop')) - parseInt(KTUtil.css(menu, 'marginBottom'));
                     } else {
                         height = parseInt(KTUtil.getViewPort().height);
@@ -9675,7 +9675,7 @@ var KTLayout = function () {
         }
 
         // Init aside menu
-        asideMenu = new KTMenu('sss_aside_menu', {
+        asideMenu = new KTMenu('vqn_aside_menu', {
             // vertical scroll
             scroll: scroll,
 
@@ -9695,7 +9695,7 @@ var KTLayout = function () {
 
     // Scrolltop
     var initScrolltop = function () {
-        var scrolltop = new KTScrolltop('sss_scrolltop', {
+        var scrolltop = new KTScrolltop('vqn_scrolltop', {
             offset: 200,
             speed: 400
         });
@@ -9703,28 +9703,28 @@ var KTLayout = function () {
 
     // Init page sticky portlet
     var initPageStickyPortlet = function () {
-        return new KTPortlet('sss_page_portlet', {
+        return new KTPortlet('vqn_page_portlet', {
             sticky: {
-                offset: parseInt(KTUtil.css(KTUtil.get('sss_header'), 'height')) + 200,
+                offset: parseInt(KTUtil.css(KTUtil.get('vqn_header'), 'height')) + 200,
                 zIndex: 90,
                 position: {
                     top: function () {
                         if (KTUtil.isInResponsiveRange('desktop')) {
-                            return parseInt(KTUtil.css(KTUtil.get('sss_header'), 'height'));
+                            return parseInt(KTUtil.css(KTUtil.get('vqn_header'), 'height'));
                         } else {
-                            return parseInt(KTUtil.css(KTUtil.get('sss_header_mobile'), 'height'));
+                            return parseInt(KTUtil.css(KTUtil.get('vqn_header_mobile'), 'height'));
                         }
                     },
                     left: function () {
                         if (KTUtil.isInResponsiveRange('tablet-and-mobile')) {
-                            return parseInt(KTUtil.css(KTUtil.get('sss_body'), 'paddingLeft'));
+                            return parseInt(KTUtil.css(KTUtil.get('vqn_body'), 'paddingLeft'));
                         }
 
                         return;
                     },
                     right: function () {
                         if (KTUtil.isInResponsiveRange('tablet-and-mobile')) {
-                            return parseInt(KTUtil.css(KTUtil.get('sss_body'), 'paddingRight'));
+                            return parseInt(KTUtil.css(KTUtil.get('vqn_body'), 'paddingRight'));
                         }
 
                         return;
@@ -9740,20 +9740,20 @@ var KTLayout = function () {
 
         height = KTUtil.getViewPort().height;
 
-        if (KTUtil.getByID('sss_header')) {
-            height = height - KTUtil.actualHeight('sss_header');
+        if (KTUtil.getByID('vqn_header')) {
+            height = height - KTUtil.actualHeight('vqn_header');
         }
 
-        if (KTUtil.getByID('sss_subheader')) {
-            height = height - KTUtil.actualHeight('sss_subheader');
+        if (KTUtil.getByID('vqn_subheader')) {
+            height = height - KTUtil.actualHeight('vqn_subheader');
         }
 
-        if (KTUtil.getByID('sss_footer')) {
-            height = height - 40; //parseInt(KTUtil.css('sss_footer', 'height'));
+        if (KTUtil.getByID('vqn_footer')) {
+            height = height - 40; //parseInt(KTUtil.css('vqn_footer', 'height'));
         }
 
-        if (KTUtil.getByID('sss_content')) {
-            height = height - parseInt(KTUtil.css('sss_content', 'padding-top')) - parseInt(KTUtil.css('sss_content', 'padding-bottom'));
+        if (KTUtil.getByID('vqn_content')) {
+            height = height - parseInt(KTUtil.css('vqn_content', 'padding-top')) - parseInt(KTUtil.css('vqn_content', 'padding-bottom'));
         }
 
         return height;
@@ -9768,7 +9768,7 @@ var KTLayout = function () {
             this.initPageStickyPortlet();
 
             // Non functional links notice(can be removed in production)
-            $('#sss_aside_menu, #sss_header_menu').on('click', '.vqn-menu__link[href="#"]', function () {
+            $('#vqn_aside_menu, #vqn_header_menu').on('click', '.vqn-menu__link[href="#"]', function () {
                 if (location.hostname.match('keenthemes.com')) {
                     swal.fire("You have clicked on a dummy link!", "To browse the theme features please refer to the header menu.", "warning");
                 } else {
@@ -9794,7 +9794,7 @@ var KTLayout = function () {
         },
 
         initPageStickyPortlet: function () {
-            if (!KTUtil.get('sss_page_portlet')) {
+            if (!KTUtil.get('vqn_page_portlet')) {
                 return;
             }
 

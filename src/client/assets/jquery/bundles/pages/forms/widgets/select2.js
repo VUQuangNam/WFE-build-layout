@@ -3,22 +3,22 @@ var KTSelect2 = function () {
     // Private functions
     var demos = function () {
         // basic
-        $('#sss_select2_1, #sss_select2_1_validate').select2({
+        $('#vqn_select2_1, #vqn_select2_1_validate').select2({
             placeholder: "Select a state"
         });
 
         // nested
-        $('#sss_select2_2, #sss_select2_2_validate').select2({
+        $('#vqn_select2_2, #vqn_select2_2_validate').select2({
             placeholder: "Select a state"
         });
 
         // multi select
-        $('#sss_select2_3, #sss_select2_3_validate').select2({
+        $('#vqn_select2_3, #vqn_select2_3_validate').select2({
             placeholder: "Select a state",
         });
 
         // basic
-        $('#sss_select2_4').select2({
+        $('#vqn_select2_4').select2({
             placeholder: "Select a state",
             allowClear: true
         });
@@ -41,7 +41,7 @@ var KTSelect2 = function () {
             text: 'Wontfix'
         }];
 
-        $('#sss_select2_5').select2({
+        $('#vqn_select2_5').select2({
             placeholder: "Select a value",
             data: data
         });
@@ -69,7 +69,7 @@ var KTSelect2 = function () {
             return repo.full_name || repo.text;
         }
 
-        $("#sss_select2_6").select2({
+        $("#vqn_select2_6").select2({
             placeholder: "Search for git repositories",
             allowClear: true,
             ajax: {
@@ -109,34 +109,34 @@ var KTSelect2 = function () {
         // custom styles
 
         // tagging support
-        $('#sss_select2_12_1, #sss_select2_12_2, #sss_select2_12_3, #sss_select2_12_4').select2({
+        $('#vqn_select2_12_1, #vqn_select2_12_2, #vqn_select2_12_3, #vqn_select2_12_4').select2({
             placeholder: "Select an option",
         });
 
         // disabled mode
-        $('#sss_select2_7').select2({
+        $('#vqn_select2_7').select2({
             placeholder: "Select an option"
         });
 
         // disabled results
-        $('#sss_select2_8').select2({
+        $('#vqn_select2_8').select2({
             placeholder: "Select an option"
         });
 
         // limiting the number of selections
-        $('#sss_select2_9').select2({
+        $('#vqn_select2_9').select2({
             placeholder: "Select an option",
             maximumSelectionLength: 2
         });
 
         // hiding the search box
-        $('#sss_select2_10').select2({
+        $('#vqn_select2_10').select2({
             placeholder: "Select an option",
             minimumResultsForSearch: Infinity
         });
 
         // tagging support
-        $('#sss_select2_11').select2({
+        $('#vqn_select2_11').select2({
             placeholder: "Add a tag",
             tags: true
         });
@@ -148,24 +148,24 @@ var KTSelect2 = function () {
     }
 
     var modalDemos = function () {
-        $('#sss_select2_modal').on('shown.bs.modal', function () {
+        $('#vqn_select2_modal').on('shown.bs.modal', function () {
             // basic
-            $('#sss_select2_1_modal').select2({
+            $('#vqn_select2_1_modal').select2({
                 placeholder: "Select a state"
             });
 
             // nested
-            $('#sss_select2_2_modal').select2({
+            $('#vqn_select2_2_modal').select2({
                 placeholder: "Select a state"
             });
 
             // multi select
-            $('#sss_select2_3_modal').select2({
+            $('#vqn_select2_3_modal').select2({
                 placeholder: "Select a state",
             });
 
             // basic
-            $('#sss_select2_4_modal').select2({
+            $('#vqn_select2_4_modal').select2({
                 placeholder: "Select a state",
                 allowClear: true
             });

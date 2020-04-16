@@ -5,8 +5,8 @@ var KTAutosize = function () {
     // Private functions
     var demos = function () {
         // basic demo
-        var demo1 = $('#sss_autosize_1');
-        var demo2 = $('#sss_autosize_2');
+        var demo1 = $('#vqn_autosize_1');
+        var demo2 = $('#vqn_autosize_2');
 
         autosize(demo1);
 

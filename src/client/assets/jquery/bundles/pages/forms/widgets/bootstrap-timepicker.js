@@ -5,10 +5,10 @@ var KTBootstrapTimepicker = function () {
     // Private functions
     var demos = function () {
         // minimum setup
-        $('#sss_timepicker_1, #sss_timepicker_1_modal').timepicker();
+        $('#vqn_timepicker_1, #vqn_timepicker_1_modal').timepicker();
 
         // minimum setup
-        $('#sss_timepicker_2, #sss_timepicker_2_modal').timepicker({
+        $('#vqn_timepicker_2, #vqn_timepicker_2_modal').timepicker({
             minuteStep: 1,
             defaultTime: '',
             showSeconds: true,
@@ -17,7 +17,7 @@ var KTBootstrapTimepicker = function () {
         });
 
         // default time
-        $('#sss_timepicker_3, #sss_timepicker_3_modal').timepicker({
+        $('#vqn_timepicker_3, #vqn_timepicker_3_modal').timepicker({
             defaultTime: '11:45:20 AM',
             minuteStep: 1,
             showSeconds: true,
@@ -25,7 +25,7 @@ var KTBootstrapTimepicker = function () {
         });
 
         // default time
-        $('#sss_timepicker_4, #sss_timepicker_4_modal').timepicker({
+        $('#vqn_timepicker_4, #vqn_timepicker_4_modal').timepicker({
             defaultTime: '10:30:20 AM',
             minuteStep: 1,
             showSeconds: true,
@@ -34,7 +34,7 @@ var KTBootstrapTimepicker = function () {
 
         // validation state demos
         // minimum setup
-        $('#sss_timepicker_1_validate, #sss_timepicker_2_validate, #sss_timepicker_3_validate').timepicker({
+        $('#vqn_timepicker_1_validate, #vqn_timepicker_2_validate, #vqn_timepicker_3_validate').timepicker({
             minuteStep: 1,
             showSeconds: true,
             showMeridian: false,

@@ -18,7 +18,7 @@ var KTBootstrapDatepicker = function () {
     // Private functions
     var demos = function () {
         // minimum setup
-        $('#sss_datepicker_1, #sss_datepicker_1_validate').datepicker({
+        $('#vqn_datepicker_1, #vqn_datepicker_1_validate').datepicker({
             rtl: KTUtil.isRTL(),
             todayHighlight: true,
             orientation: "bottom left",
@@ -26,7 +26,7 @@ var KTBootstrapDatepicker = function () {
         });
 
         // minimum setup for modal demo
-        $('#sss_datepicker_1_modal').datepicker({
+        $('#vqn_datepicker_1_modal').datepicker({
             rtl: KTUtil.isRTL(),
             todayHighlight: true,
             orientation: "bottom left",
@@ -34,7 +34,7 @@ var KTBootstrapDatepicker = function () {
         });
 
         // input group layout 
-        $('#sss_datepicker_2, #sss_datepicker_2_validate').datepicker({
+        $('#vqn_datepicker_2, #vqn_datepicker_2_validate').datepicker({
             rtl: KTUtil.isRTL(),
             todayHighlight: true,
             orientation: "bottom left",
@@ -42,7 +42,7 @@ var KTBootstrapDatepicker = function () {
         });
 
         // input group layout for modal demo
-        $('#sss_datepicker_2_modal').datepicker({
+        $('#vqn_datepicker_2_modal').datepicker({
             rtl: KTUtil.isRTL(),
             todayHighlight: true,
             orientation: "bottom left",
@@ -50,7 +50,7 @@ var KTBootstrapDatepicker = function () {
         });
 
         // enable clear button 
-        $('#sss_datepicker_3, #sss_datepicker_3_validate').datepicker({
+        $('#vqn_datepicker_3, #vqn_datepicker_3_validate').datepicker({
             rtl: KTUtil.isRTL(),
             todayBtn: "linked",
             clearBtn: true,
@@ -59,7 +59,7 @@ var KTBootstrapDatepicker = function () {
         });
 
         // enable clear button for modal demo
-        $('#sss_datepicker_3_modal').datepicker({
+        $('#vqn_datepicker_3_modal').datepicker({
             rtl: KTUtil.isRTL(),
             todayBtn: "linked",
             clearBtn: true,
@@ -68,28 +68,28 @@ var KTBootstrapDatepicker = function () {
         });
 
         // orientation 
-        $('#sss_datepicker_4_1').datepicker({
+        $('#vqn_datepicker_4_1').datepicker({
             rtl: KTUtil.isRTL(),
             orientation: "top left",
             todayHighlight: true,
             templates: arrows
         });
 
-        $('#sss_datepicker_4_2').datepicker({
+        $('#vqn_datepicker_4_2').datepicker({
             rtl: KTUtil.isRTL(),
             orientation: "top right",
             todayHighlight: true,
             templates: arrows
         });
 
-        $('#sss_datepicker_4_3').datepicker({
+        $('#vqn_datepicker_4_3').datepicker({
             rtl: KTUtil.isRTL(),
             orientation: "bottom left",
             todayHighlight: true,
             templates: arrows
         });
 
-        $('#sss_datepicker_4_4').datepicker({
+        $('#vqn_datepicker_4_4').datepicker({
             rtl: KTUtil.isRTL(),
             orientation: "bottom right",
             todayHighlight: true,
@@ -97,14 +97,14 @@ var KTBootstrapDatepicker = function () {
         });
 
         // range picker
-        $('#sss_datepicker_5').datepicker({
+        $('#vqn_datepicker_5').datepicker({
             rtl: KTUtil.isRTL(),
             todayHighlight: true,
             templates: arrows
         });
 
         // inline picker
-        $('#sss_datepicker_6').datepicker({
+        $('#vqn_datepicker_6').datepicker({
             rtl: KTUtil.isRTL(),
             todayHighlight: true,
             templates: arrows

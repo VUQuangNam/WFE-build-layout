@@ -97,7 +97,7 @@ var KTDashboard = function () {
     // Daily Sales chart.
     // Based on Chartjs plugin - http://www.chartjs.org/
     var dailySales = function () {
-        var chartContainer = KTUtil.getByID('sss_chart_daily_sales');
+        var chartContainer = KTUtil.getByID('vqn_chart_daily_sales');
 
         if (!chartContainer) {
             return;
@@ -167,7 +167,7 @@ var KTDashboard = function () {
     // Profit Share Chart.
     // Based on Chartjs plugin - http://www.chartjs.org/
     var profitShare = function () {
-        if (!KTUtil.getByID('sss_chart_profit_share')) {
+        if (!KTUtil.getByID('vqn_chart_profit_share')) {
             return;
         }
 
@@ -228,14 +228,14 @@ var KTDashboard = function () {
             }
         };
 
-        var ctx = KTUtil.getByID('sss_chart_profit_share').getContext('2d');
+        var ctx = KTUtil.getByID('vqn_chart_profit_share').getContext('2d');
         var myDoughnut = new Chart(ctx, config);
     }
 
     // Sales Stats.
     // Based on Chartjs plugin - http://www.chartjs.org/
     var salesStats = function () {
-        if (!KTUtil.getByID('sss_chart_sales_stats')) {
+        if (!KTUtil.getByID('vqn_chart_sales_stats')) {
             return;
         }
 
@@ -318,32 +318,32 @@ var KTDashboard = function () {
             }
         };
 
-        var chart = new Chart(KTUtil.getByID('sss_chart_sales_stats'), config);
+        var chart = new Chart(KTUtil.getByID('vqn_chart_sales_stats'), config);
     }
 
     // Sales By KTUtillication Stats.
     // Based on Chartjs plugin - http://www.chartjs.org/
     var salesByApps = function () {
         // Init chart instances
-        _initSparklineChart($('#sss_chart_sales_by_apps_1_1'), [10, 20, -5, 8, -20, -2, -4, 15, 5, 8], KTApp.getStateColor('success'), 2);
-        _initSparklineChart($('#sss_chart_sales_by_apps_1_2'), [2, 16, 0, 12, 22, 5, -10, 5, 15, 2], KTApp.getStateColor('danger'), 2);
-        _initSparklineChart($('#sss_chart_sales_by_apps_1_3'), [15, 5, -10, 5, 16, 22, 6, -6, -12, 5], KTApp.getStateColor('success'), 2);
-        _initSparklineChart($('#sss_chart_sales_by_apps_1_4'), [8, 18, -12, 12, 22, -2, -14, 16, 18, 2], KTApp.getStateColor('warning'), 2);
+        _initSparklineChart($('#vqn_chart_sales_by_apps_1_1'), [10, 20, -5, 8, -20, -2, -4, 15, 5, 8], KTApp.getStateColor('success'), 2);
+        _initSparklineChart($('#vqn_chart_sales_by_apps_1_2'), [2, 16, 0, 12, 22, 5, -10, 5, 15, 2], KTApp.getStateColor('danger'), 2);
+        _initSparklineChart($('#vqn_chart_sales_by_apps_1_3'), [15, 5, -10, 5, 16, 22, 6, -6, -12, 5], KTApp.getStateColor('success'), 2);
+        _initSparklineChart($('#vqn_chart_sales_by_apps_1_4'), [8, 18, -12, 12, 22, -2, -14, 16, 18, 2], KTApp.getStateColor('warning'), 2);
 
-        _initSparklineChart($('#sss_chart_sales_by_apps_2_1'), [10, 20, -5, 8, -20, -2, -4, 15, 5, 8], KTApp.getStateColor('danger'), 2);
-        _initSparklineChart($('#sss_chart_sales_by_apps_2_2'), [2, 16, 0, 12, 22, 5, -10, 5, 15, 2], KTApp.getStateColor('dark'), 2);
-        _initSparklineChart($('#sss_chart_sales_by_apps_2_3'), [15, 5, -10, 5, 16, 22, 6, -6, -12, 5], KTApp.getStateColor('brand'), 2);
-        _initSparklineChart($('#sss_chart_sales_by_apps_2_4'), [8, 18, -12, 12, 22, -2, -14, 16, 18, 2], KTApp.getStateColor('info'), 2);
+        _initSparklineChart($('#vqn_chart_sales_by_apps_2_1'), [10, 20, -5, 8, -20, -2, -4, 15, 5, 8], KTApp.getStateColor('danger'), 2);
+        _initSparklineChart($('#vqn_chart_sales_by_apps_2_2'), [2, 16, 0, 12, 22, 5, -10, 5, 15, 2], KTApp.getStateColor('dark'), 2);
+        _initSparklineChart($('#vqn_chart_sales_by_apps_2_3'), [15, 5, -10, 5, 16, 22, 6, -6, -12, 5], KTApp.getStateColor('brand'), 2);
+        _initSparklineChart($('#vqn_chart_sales_by_apps_2_4'), [8, 18, -12, 12, 22, -2, -14, 16, 18, 2], KTApp.getStateColor('info'), 2);
     }
 
     // Latest Updates.
     // Based on Chartjs plugin - http://www.chartjs.org/
     var latestUpdates = function () {
-        if ($('#sss_chart_latest_updates').length == 0) {
+        if ($('#vqn_chart_latest_updates').length == 0) {
             return;
         }
 
-        var ctx = document.getElementById("sss_chart_latest_updates").getContext("2d");
+        var ctx = document.getElementById("vqn_chart_latest_updates").getContext("2d");
 
         var config = {
             type: 'line',
@@ -422,11 +422,11 @@ var KTDashboard = function () {
     // Trends Stats.
     // Based on Chartjs plugin - http://www.chartjs.org/
     var trendsStats = function () {
-        if ($('#sss_chart_trends_stats').length == 0) {
+        if ($('#vqn_chart_trends_stats').length == 0) {
             return;
         }
 
-        var ctx = document.getElementById("sss_chart_trends_stats").getContext("2d");
+        var ctx = document.getElementById("vqn_chart_trends_stats").getContext("2d");
 
         var gradient = ctx.createLinearGradient(0, 0, 0, 240);
         gradient.addColorStop(0, Chart.helpers.color('#00c5dc').alpha(0.7).rgbString());
@@ -526,11 +526,11 @@ var KTDashboard = function () {
     // Trends Stats 2.
     // Based on Chartjs plugin - http://www.chartjs.org/
     var trendsStats2 = function () {
-        if ($('#sss_chart_trends_stats_2').length == 0) {
+        if ($('#vqn_chart_trends_stats_2').length == 0) {
             return;
         }
 
-        var ctx = document.getElementById("sss_chart_trends_stats_2").getContext("2d");
+        var ctx = document.getElementById("vqn_chart_trends_stats_2").getContext("2d");
 
         var config = {
             type: 'line',
@@ -626,13 +626,13 @@ var KTDashboard = function () {
     // Trends Stats.
     // Based on Chartjs plugin - http://www.chartjs.org/
     var latestTrendsMap = function () {
-        if ($('#sss_chart_latest_trends_map').length == 0) {
+        if ($('#vqn_chart_latest_trends_map').length == 0) {
             return;
         }
 
         try {
             var map = new GMaps({
-                div: '#sss_chart_latest_trends_map',
+                div: '#vqn_chart_latest_trends_map',
                 lat: -12.043333,
                 lng: -77.028333
             });
@@ -644,12 +644,12 @@ var KTDashboard = function () {
     // Revenue Change.
     // Based on Morris plugin - http://morrisjs.github.io/morris.js/
     var revenueChange = function () {
-        if ($('#sss_chart_revenue_change').length == 0) {
+        if ($('#vqn_chart_revenue_change').length == 0) {
             return;
         }
 
         Morris.Donut({
-            element: 'sss_chart_revenue_change',
+            element: 'vqn_chart_revenue_change',
             data: [{
                 label: "New York",
                 value: 10
@@ -674,12 +674,12 @@ var KTDashboard = function () {
     // Support Tickets Chart.
     // Based on Morris plugin - http://morrisjs.github.io/morris.js/
     var supportCases = function () {
-        if ($('#sss_chart_support_tickets').length == 0) {
+        if ($('#vqn_chart_support_tickets').length == 0) {
             return;
         }
 
         Morris.Donut({
-            element: 'sss_chart_support_tickets',
+            element: 'vqn_chart_support_tickets',
             data: [{
                 label: "Margins",
                 value: 20
@@ -706,7 +706,7 @@ var KTDashboard = function () {
     // Support Tickets Chart.
     // Based on Chartjs plugin - http://www.chartjs.org/
     var supportRequests = function () {
-        var container = KTUtil.getByID('sss_chart_support_requests');
+        var container = KTUtil.getByID('vqn_chart_support_requests');
 
         if (!container) {
             return;
@@ -776,11 +776,11 @@ var KTDashboard = function () {
     // Activities Charts.
     // Based on Chartjs plugin - http://www.chartjs.org/
     var activitiesChart = function () {
-        if ($('#sss_chart_activities').length == 0) {
+        if ($('#vqn_chart_activities').length == 0) {
             return;
         }
 
-        var ctx = document.getElementById("sss_chart_activities").getContext("2d");
+        var ctx = document.getElementById("vqn_chart_activities").getContext("2d");
 
         var gradient = ctx.createLinearGradient(0, 0, 0, 240);
         gradient.addColorStop(0, Chart.helpers.color('#e14c86').alpha(1).rgbString());
@@ -870,11 +870,11 @@ var KTDashboard = function () {
     // Bandwidth Charts 1.
     // Based on Chartjs plugin - http://www.chartjs.org/
     var bandwidthChart1 = function () {
-        if ($('#sss_chart_bandwidth1').length == 0) {
+        if ($('#vqn_chart_bandwidth1').length == 0) {
             return;
         }
 
-        var ctx = document.getElementById("sss_chart_bandwidth1").getContext("2d");
+        var ctx = document.getElementById("vqn_chart_bandwidth1").getContext("2d");
 
         var gradient = ctx.createLinearGradient(0, 0, 0, 240);
         gradient.addColorStop(0, Chart.helpers.color('#d1f1ec').alpha(1).rgbString());
@@ -964,11 +964,11 @@ var KTDashboard = function () {
     // Bandwidth Charts 2.
     // Based on Chartjs plugin - http://www.chartjs.org/
     var bandwidthChart2 = function () {
-        if ($('#sss_chart_bandwidth2').length == 0) {
+        if ($('#vqn_chart_bandwidth2').length == 0) {
             return;
         }
 
-        var ctx = document.getElementById("sss_chart_bandwidth2").getContext("2d");
+        var ctx = document.getElementById("vqn_chart_bandwidth2").getContext("2d");
 
         var gradient = ctx.createLinearGradient(0, 0, 0, 240);
         gradient.addColorStop(0, Chart.helpers.color('#ffefce').alpha(1).rgbString());
@@ -1057,11 +1057,11 @@ var KTDashboard = function () {
     // Bandwidth Charts 2.
     // Based on Chartjs plugin - http://www.chartjs.org/
     var adWordsStat = function () {
-        if ($('#sss_chart_adwords_stats').length == 0) {
+        if ($('#vqn_chart_adwords_stats').length == 0) {
             return;
         }
 
-        var ctx = document.getElementById("sss_chart_adwords_stats").getContext("2d");
+        var ctx = document.getElementById("vqn_chart_adwords_stats").getContext("2d");
 
         var gradient = ctx.createLinearGradient(0, 0, 0, 240);
         gradient.addColorStop(0, Chart.helpers.color('#ffefce').alpha(1).rgbString());
@@ -1163,11 +1163,11 @@ var KTDashboard = function () {
     // Bandwidth Charts 2.
     // Based on Chartjs plugin - http://www.chartjs.org/
     var financeSummary = function () {
-        if ($('#sss_chart_finance_summary').length == 0) {
+        if ($('#vqn_chart_finance_summary').length == 0) {
             return;
         }
 
-        var ctx = document.getElementById("sss_chart_finance_summary").getContext("2d");
+        var ctx = document.getElementById("vqn_chart_finance_summary").getContext("2d");
 
         var config = {
             type: 'line',
@@ -1252,7 +1252,7 @@ var KTDashboard = function () {
     // Order Statistics.
     // Based on Chartjs plugin - http://www.chartjs.org/
     var orderStatistics = function () {
-        var container = KTUtil.getByID('sss_chart_order_statistics');
+        var container = KTUtil.getByID('vqn_chart_order_statistics');
 
         if (!container) {
             return;
@@ -1387,19 +1387,19 @@ var KTDashboard = function () {
 
     // Quick Stat Charts
     var quickStats = function () {
-        _initSparklineChart($('#sss_chart_quick_stats_1'), [10, 14, 18, 11, 9, 12, 14, 17, 18, 14], KTApp.getStateColor('brand'), 3);
-        _initSparklineChart($('#sss_chart_quick_stats_2'), [11, 12, 18, 13, 11, 12, 15, 13, 19, 15], KTApp.getStateColor('danger'), 3);
-        _initSparklineChart($('#sss_chart_quick_stats_3'), [12, 12, 18, 11, 15, 12, 13, 16, 11, 18], KTApp.getStateColor('success'), 3);
-        _initSparklineChart($('#sss_chart_quick_stats_4'), [11, 9, 13, 18, 13, 15, 14, 13, 18, 15], KTApp.getStateColor('success'), 3);
+        _initSparklineChart($('#vqn_chart_quick_stats_1'), [10, 14, 18, 11, 9, 12, 14, 17, 18, 14], KTApp.getStateColor('brand'), 3);
+        _initSparklineChart($('#vqn_chart_quick_stats_2'), [11, 12, 18, 13, 11, 12, 15, 13, 19, 15], KTApp.getStateColor('danger'), 3);
+        _initSparklineChart($('#vqn_chart_quick_stats_3'), [12, 12, 18, 11, 15, 12, 13, 16, 11, 18], KTApp.getStateColor('success'), 3);
+        _initSparklineChart($('#vqn_chart_quick_stats_4'), [11, 9, 13, 18, 13, 15, 14, 13, 18, 15], KTApp.getStateColor('success'), 3);
     }
 
     // Daterangepicker Init
     var daterangepickerInit = function () {
-        if ($('#sss_dashboard_daterangepicker').length == 0) {
+        if ($('#vqn_dashboard_daterangepicker').length == 0) {
             return;
         }
 
-        var picker = $('#sss_dashboard_daterangepicker');
+        var picker = $('#vqn_dashboard_daterangepicker');
         var start = moment();
         var end = moment();
 
@@ -1417,8 +1417,8 @@ var KTDashboard = function () {
                 range = start.format('MMM D') + ' - ' + end.format('MMM D');
             }
 
-            $('#sss_dashboard_daterangepicker_date').html(range);
-            $('#sss_dashboard_daterangepicker_title').html(title);
+            $('#vqn_dashboard_daterangepicker_date').html(range);
+            $('#vqn_dashboard_daterangepicker_title').html(title);
         }
 
         picker.daterangepicker({
@@ -1441,7 +1441,7 @@ var KTDashboard = function () {
 
     // Latest Orders
     var datatableLatestOrders = function () {
-        if ($('#sss_datatable_latest_orders').length === 0) {
+        if ($('#vqn_datatable_latest_orders').length === 0) {
             return;
         }
 
@@ -1676,7 +1676,7 @@ var KTDashboard = function () {
 
     // Calendar Init
     var calendarInit = function () {
-        if ($('#sss_calendar').length === 0) {
+        if ($('#vqn_calendar').length === 0) {
             return;
         }
 
@@ -1686,7 +1686,7 @@ var KTDashboard = function () {
         var TODAY = todayDate.format('YYYY-MM-DD');
         var TOMORROW = todayDate.clone().add(1, 'day').format('YYYY-MM-DD');
 
-        $('#sss_calendar').fullCalendar({
+        $('#vqn_calendar').fullCalendar({
             isRTL: KTUtil.isRTL(),
             header: {
                 left: 'prev,next today',
@@ -1834,8 +1834,8 @@ var KTDashboard = function () {
 
     // Earnings Sliders
     var earningsSlide = function () {
-        var carousel1 = $('#sss_earnings_widget .vqn-widget30__head .owl-carousel');
-        var carousel2 = $('#sss_earnings_widget .vqn-widget30__body .owl-carousel');
+        var carousel1 = $('#vqn_earnings_widget .vqn-widget30__head .owl-carousel');
+        var carousel2 = $('#vqn_earnings_widget .vqn-widget30__body .owl-carousel');
 
         carousel1.find('.carousel').each(function (index) {
             $(this).attr('data-position', index);

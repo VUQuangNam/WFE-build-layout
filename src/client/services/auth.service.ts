@@ -10,7 +10,7 @@ export class AuthService {
         private headerConfig: HeaderConfig
     ) { }
     /**
-     * Login with sss account
+     * Login with vqn account
      *
      * @param username
      * @param password
@@ -26,7 +26,7 @@ export class AuthService {
     }
 
     /**
-     * Logout from sss
+     * Logout from vqn
      */
     logout() {
         return this.http.post(

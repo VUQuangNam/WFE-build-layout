@@ -1,5 +1,5 @@
 <!-- begin:: Page -->
-<div class="vqn-grid vqn-grid--hor vqn-grid--root  vqn-login vqn-login--v5 vqn-login--signin" id="sss_login">
+<div class="vqn-grid vqn-grid--hor vqn-grid--root  vqn-login vqn-login--v5 vqn-login--signin" id="vqn_login">
     <div class="vqn-grid__item vqn-grid__item--fluid vqn-grid vqn-grid--desktop vqn-grid--ver-desktop vqn-grid--hor-tablet-and-mobile"
         style="background-image: url('/assets/media/bg/bg.jpg'); background-size: cover;background-repeat: no-repeat">
         <div class="vqn-login__left">
@@ -48,7 +48,7 @@
                                 </div>
                             </div>
                             <div class="vqn-login__actions">
-                                <button type="submit" id="sss_login_signin_submit" class="btn btn-danger btn-pill">
+                                <button type="submit" id="vqn_login_signin_submit" class="btn btn-danger btn-pill">
                                     Đăng Nhập
                                 </button>
                                 <br>
@@ -91,11 +91,11 @@
                                 </div>
                             </div>
                             <div class="vqn-login__actions">
-                                <button type="button" id="sss_login_signin_submit" class="btn btn-danger btn-pill"
+                                <button type="button" id="vqn_login_signin_submit" class="btn btn-danger btn-pill"
                                     (click)="isSignin = !isSignin">
                                     Đăng nhập
                                 </button>
-                                <button type="button" id="sss_login_signin_submit" class="btn btn-danger btn-pill"
+                                <button type="button" id="vqn_login_signin_submit" class="btn btn-danger btn-pill"
                                     [ngClass]="{'vqn-spinner vqn-spinner--right vqn-spinner--md vqn-spinner--light': loading}"
                                     (click)="signUp()">
                                     Đăng ký

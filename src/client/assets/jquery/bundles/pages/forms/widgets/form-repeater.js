@@ -3,7 +3,7 @@ var KTFormRepeater = function () {
 
     // Private functions
     var demo1 = function () {
-        $('#sss_repeater_1').repeater({
+        $('#vqn_repeater_1').repeater({
             initEmpty: false,
 
             defaultValues: {
@@ -21,7 +21,7 @@ var KTFormRepeater = function () {
     }
 
     var demo2 = function () {
-        $('#sss_repeater_2').repeater({
+        $('#vqn_repeater_2').repeater({
             initEmpty: false,
 
             defaultValues: {
@@ -42,7 +42,7 @@ var KTFormRepeater = function () {
 
 
     var demo3 = function () {
-        $('#sss_repeater_3').repeater({
+        $('#vqn_repeater_3').repeater({
             initEmpty: false,
 
             defaultValues: {
@@ -62,7 +62,7 @@ var KTFormRepeater = function () {
     }
 
     var demo4 = function () {
-        $('#sss_repeater_4').repeater({
+        $('#vqn_repeater_4').repeater({
             initEmpty: false,
 
             defaultValues: {
@@ -80,7 +80,7 @@ var KTFormRepeater = function () {
     }
 
     var demo5 = function () {
-        $('#sss_repeater_5').repeater({
+        $('#vqn_repeater_5').repeater({
             initEmpty: false,
 
             defaultValues: {
@@ -98,7 +98,7 @@ var KTFormRepeater = function () {
     }
 
     var demo6 = function () {
-        $('#sss_repeater_6').repeater({
+        $('#vqn_repeater_6').repeater({
             initEmpty: false,
 
             defaultValues: {

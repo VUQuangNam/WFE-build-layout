@@ -5,49 +5,49 @@ var KTBootstrapDaterangepicker = function () {
     // Private functions
     var demos = function () {
         // minimum setup
-        $('#sss_daterangepicker_1, #sss_daterangepicker_1_modal').daterangepicker({
+        $('#vqn_daterangepicker_1, #vqn_daterangepicker_1_modal').daterangepicker({
             buttonClasses: ' btn',
             applyClass: 'btn-primary',
             cancelClass: 'btn-secondary'
         });
 
         // input group and left alignment setup
-        $('#sss_daterangepicker_2').daterangepicker({
+        $('#vqn_daterangepicker_2').daterangepicker({
             buttonClasses: ' btn',
             applyClass: 'btn-primary',
             cancelClass: 'btn-secondary'
         }, function (start, end, label) {
-            $('#sss_daterangepicker_2 .form-control').val(start.format('YYYY-MM-DD') + ' / ' + end.format('YYYY-MM-DD'));
+            $('#vqn_daterangepicker_2 .form-control').val(start.format('YYYY-MM-DD') + ' / ' + end.format('YYYY-MM-DD'));
         });
 
-        $('#sss_daterangepicker_2_modal').daterangepicker({
+        $('#vqn_daterangepicker_2_modal').daterangepicker({
             buttonClasses: ' btn',
             applyClass: 'btn-primary',
             cancelClass: 'btn-secondary'
         }, function (start, end, label) {
-            $('#sss_daterangepicker_2 .form-control').val(start.format('YYYY-MM-DD') + ' / ' + end.format('YYYY-MM-DD'));
+            $('#vqn_daterangepicker_2 .form-control').val(start.format('YYYY-MM-DD') + ' / ' + end.format('YYYY-MM-DD'));
         });
 
         // left alignment setup
-        $('#sss_daterangepicker_3').daterangepicker({
+        $('#vqn_daterangepicker_3').daterangepicker({
             buttonClasses: ' btn',
             applyClass: 'btn-primary',
             cancelClass: 'btn-secondary'
         }, function (start, end, label) {
-            $('#sss_daterangepicker_3 .form-control').val(start.format('YYYY-MM-DD') + ' / ' + end.format('YYYY-MM-DD'));
+            $('#vqn_daterangepicker_3 .form-control').val(start.format('YYYY-MM-DD') + ' / ' + end.format('YYYY-MM-DD'));
         });
 
-        $('#sss_daterangepicker_3_modal').daterangepicker({
+        $('#vqn_daterangepicker_3_modal').daterangepicker({
             buttonClasses: ' btn',
             applyClass: 'btn-primary',
             cancelClass: 'btn-secondary'
         }, function (start, end, label) {
-            $('#sss_daterangepicker_3 .form-control').val(start.format('YYYY-MM-DD') + ' / ' + end.format('YYYY-MM-DD'));
+            $('#vqn_daterangepicker_3 .form-control').val(start.format('YYYY-MM-DD') + ' / ' + end.format('YYYY-MM-DD'));
         });
 
 
         // date & time
-        $('#sss_daterangepicker_4').daterangepicker({
+        $('#vqn_daterangepicker_4').daterangepicker({
             buttonClasses: ' btn',
             applyClass: 'btn-primary',
             cancelClass: 'btn-secondary',
@@ -58,11 +58,11 @@ var KTBootstrapDaterangepicker = function () {
                 format: 'MM/DD/YYYY h:mm A'
             }
         }, function (start, end, label) {
-            $('#sss_daterangepicker_4 .form-control').val(start.format('MM/DD/YYYY h:mm A') + ' / ' + end.format('MM/DD/YYYY h:mm A'));
+            $('#vqn_daterangepicker_4 .form-control').val(start.format('MM/DD/YYYY h:mm A') + ' / ' + end.format('MM/DD/YYYY h:mm A'));
         });
 
         // date picker
-        $('#sss_daterangepicker_5').daterangepicker({
+        $('#vqn_daterangepicker_5').daterangepicker({
             buttonClasses: ' btn',
             applyClass: 'btn-primary',
             cancelClass: 'btn-secondary',
@@ -73,14 +73,14 @@ var KTBootstrapDaterangepicker = function () {
                 format: 'MM/DD/YYYY'
             }
         }, function (start, end, label) {
-            $('#sss_daterangepicker_5 .form-control').val(start.format('MM/DD/YYYY') + ' / ' + end.format('MM/DD/YYYY'));
+            $('#vqn_daterangepicker_5 .form-control').val(start.format('MM/DD/YYYY') + ' / ' + end.format('MM/DD/YYYY'));
         });
 
         // predefined ranges
         var start = moment().subtract(29, 'days');
         var end = moment();
 
-        $('#sss_daterangepicker_6').daterangepicker({
+        $('#vqn_daterangepicker_6').daterangepicker({
             buttonClasses: ' btn',
             applyClass: 'btn-primary',
             cancelClass: 'btn-secondary',
@@ -96,36 +96,36 @@ var KTBootstrapDaterangepicker = function () {
                 'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
             }
         }, function (start, end, label) {
-            $('#sss_daterangepicker_6 .form-control').val(start.format('MM/DD/YYYY') + ' / ' + end.format('MM/DD/YYYY'));
+            $('#vqn_daterangepicker_6 .form-control').val(start.format('MM/DD/YYYY') + ' / ' + end.format('MM/DD/YYYY'));
         });
     }
 
     var validationDemos = function () {
         // input group and left alignment setup
-        $('#sss_daterangepicker_1_validate').daterangepicker({
+        $('#vqn_daterangepicker_1_validate').daterangepicker({
             buttonClasses: ' btn',
             applyClass: 'btn-primary',
             cancelClass: 'btn-secondary'
         }, function (start, end, label) {
-            $('#sss_daterangepicker_1_validate .form-control').val(start.format('YYYY-MM-DD') + ' / ' + end.format('YYYY-MM-DD'));
+            $('#vqn_daterangepicker_1_validate .form-control').val(start.format('YYYY-MM-DD') + ' / ' + end.format('YYYY-MM-DD'));
         });
 
         // input group and left alignment setup
-        $('#sss_daterangepicker_2_validate').daterangepicker({
+        $('#vqn_daterangepicker_2_validate').daterangepicker({
             buttonClasses: ' btn',
             applyClass: 'btn-primary',
             cancelClass: 'btn-secondary'
         }, function (start, end, label) {
-            $('#sss_daterangepicker_3_validate .form-control').val(start.format('YYYY-MM-DD') + ' / ' + end.format('YYYY-MM-DD'));
+            $('#vqn_daterangepicker_3_validate .form-control').val(start.format('YYYY-MM-DD') + ' / ' + end.format('YYYY-MM-DD'));
         });
 
         // input group and left alignment setup
-        $('#sss_daterangepicker_3_validate').daterangepicker({
+        $('#vqn_daterangepicker_3_validate').daterangepicker({
             buttonClasses: ' btn',
             applyClass: 'btn-primary',
             cancelClass: 'btn-secondary'
         }, function (start, end, label) {
-            $('#sss_daterangepicker_3_validate .form-control').val(start.format('YYYY-MM-DD') + ' / ' + end.format('YYYY-MM-DD'));
+            $('#vqn_daterangepicker_3_validate .form-control').val(start.format('YYYY-MM-DD') + ' / ' + end.format('YYYY-MM-DD'));
         });
     }
 

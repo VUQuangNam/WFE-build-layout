@@ -36,7 +36,7 @@ var KTTypeahead = function () {
             };
         };
 
-        $('#sss_typeahead_1, #sss_typeahead_1_modal, #sss_typeahead_1_validate, #sss_typeahead_2_validate, #sss_typeahead_3_validate').typeahead({
+        $('#vqn_typeahead_1, #vqn_typeahead_1_modal, #vqn_typeahead_1_validate, #vqn_typeahead_2_validate, #vqn_typeahead_3_validate').typeahead({
             hint: true,
             highlight: true,
             minLength: 1
@@ -55,7 +55,7 @@ var KTTypeahead = function () {
             local: states
         });
 
-        $('#sss_typeahead_2, #sss_typeahead_2_modal').typeahead({
+        $('#vqn_typeahead_2, #vqn_typeahead_2_modal').typeahead({
             hint: true,
             highlight: true,
             minLength: 1
@@ -77,7 +77,7 @@ var KTTypeahead = function () {
 
         // passing in `null` for the `options` arguments will result in the default
         // options being used
-        $('#sss_typeahead_3, #sss_typeahead_3_modal').typeahead(null, {
+        $('#vqn_typeahead_3, #vqn_typeahead_3_modal').typeahead(null, {
             name: 'countries',
             source: countries
         });
@@ -90,7 +90,7 @@ var KTTypeahead = function () {
             prefetch: 'https://keenthemes.com/metronic/themes/themes/metronic/dist/preview/inc/api/typeahead/movies.json'
         });
 
-        $('#sss_typeahead_4').typeahead(null, {
+        $('#vqn_typeahead_4').typeahead(null, {
             name: 'best-pictures',
             display: 'value',
             source: bestPictures,
@@ -118,7 +118,7 @@ var KTTypeahead = function () {
             prefetch: 'https://keenthemes.com/metronic/themes/themes/metronic/dist/preview/inc/api/typeahead/nhl.json'
         });
 
-        $('#sss_typeahead_5').typeahead({
+        $('#vqn_typeahead_5').typeahead({
             highlight: true
         }, {
             name: 'nba-teams',

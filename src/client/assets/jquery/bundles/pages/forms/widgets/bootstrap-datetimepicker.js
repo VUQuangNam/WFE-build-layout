@@ -5,26 +5,26 @@ var KTBootstrapDatetimepicker = function () {
     // Private functions
     var demos = function () {
         // minimal setup
-        $('#sss_datetimepicker_1').datetimepicker({
+        $('#vqn_datetimepicker_1').datetimepicker({
             todayHighlight: true,
             autoclose: true,
             format: 'yyyy.mm.dd hh:ii'
         });
 
-        $('#sss_datetimepicker_1_modal').datetimepicker({
+        $('#vqn_datetimepicker_1_modal').datetimepicker({
             todayHighlight: true,
             autoclose: true,
             format: 'yyyy.mm.dd hh:ii'
         });
 
         // input group demo
-        $('#sss_datetimepicker_2, #sss_datetimepicker_1_validate, #sss_datetimepicker_2_validate, #sss_datetimepicker_3_validate').datetimepicker({
+        $('#vqn_datetimepicker_2, #vqn_datetimepicker_1_validate, #vqn_datetimepicker_2_validate, #vqn_datetimepicker_3_validate').datetimepicker({
             todayHighlight: true,
             autoclose: true,
             pickerPosition: 'bottom-left',
             format: 'yyyy/mm/dd hh:ii'
         });
-        $('#sss_datetimepicker_2_modal').datetimepicker({
+        $('#vqn_datetimepicker_2_modal').datetimepicker({
             todayHighlight: true,
             autoclose: true,
             pickerPosition: 'bottom-left',
@@ -32,14 +32,14 @@ var KTBootstrapDatetimepicker = function () {
         });
 
         // today button
-        $('#sss_datetimepicker_3').datetimepicker({
+        $('#vqn_datetimepicker_3').datetimepicker({
             todayHighlight: true,
             autoclose: true,
             pickerPosition: 'bottom-left',
             todayBtn: true,
             format: 'yyyy/mm/dd hh:ii'
         });
-        $('#sss_datetimepicker_3_modal').datetimepicker({
+        $('#vqn_datetimepicker_3_modal').datetimepicker({
             todayHighlight: true,
             autoclose: true,
             pickerPosition: 'bottom-left',
@@ -48,35 +48,35 @@ var KTBootstrapDatetimepicker = function () {
         });
 
         // orientation
-        $('#sss_datetimepicker_4_1').datetimepicker({
+        $('#vqn_datetimepicker_4_1').datetimepicker({
             todayHighlight: true,
             autoclose: true,
             pickerPosition: 'bottom-left',
             format: 'yyyy.mm.dd hh:ii'
         });
 
-        $('#sss_datetimepicker_4_2').datetimepicker({
+        $('#vqn_datetimepicker_4_2').datetimepicker({
             todayHighlight: true,
             autoclose: true,
             pickerPosition: 'bottom-right',
             format: 'yyyy/mm/dd hh:ii'
         });
 
-        $('#sss_datetimepicker_4_3').datetimepicker({
+        $('#vqn_datetimepicker_4_3').datetimepicker({
             todayHighlight: true,
             autoclose: true,
             pickerPosition: 'top-left',
             format: 'yyyy-mm-dd hh:ii'
         });
 
-        $('#sss_datetimepicker_4_4').datetimepicker({
+        $('#vqn_datetimepicker_4_4').datetimepicker({
             todayHighlight: true,
             autoclose: true,
             pickerPosition: 'top-right',
             format: 'yyyy-mm-dd hh:ii'
         });
 
-        $('#sss_datetimepicker_5').datetimepicker({
+        $('#vqn_datetimepicker_5').datetimepicker({
             format: "dd MM yyyy - HH:ii P",
             showMeridian: true,
             todayHighlight: true,
@@ -84,7 +84,7 @@ var KTBootstrapDatetimepicker = function () {
             pickerPosition: 'bottom-left'
         });
 
-        $('#sss_datetimepicker_6').datetimepicker({
+        $('#vqn_datetimepicker_6').datetimepicker({
             format: "yyyy/mm/dd",
             todayHighlight: true,
             autoclose: true,
@@ -94,7 +94,7 @@ var KTBootstrapDatetimepicker = function () {
             pickerPosition: 'bottom-left'
         });
 
-        $('#sss_datetimepicker_7').datetimepicker({
+        $('#vqn_datetimepicker_7').datetimepicker({
             format: "hh:ii",
             showMeridian: true,
             todayHighlight: true,

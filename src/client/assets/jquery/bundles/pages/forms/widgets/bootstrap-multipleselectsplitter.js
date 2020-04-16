@@ -5,7 +5,7 @@ var KTBootstrapMultipleSelectsplitter = function () {
     // Private functions
     var demos = function () {
         // minimum setup
-        $('#sss_multipleselectsplitter_1, #sss_multipleselectsplitter_2').multiselectsplitter();
+        $('#vqn_multipleselectsplitter_1, #vqn_multipleselectsplitter_2').multiselectsplitter();
     }
 
     return {

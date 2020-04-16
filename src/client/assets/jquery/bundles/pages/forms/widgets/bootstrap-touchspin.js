@@ -5,7 +5,7 @@ var KTKBootstrapTouchspin = function () {
     // Private functions
     var demos = function () {
         // minimum setup
-        $('#sss_touchspin_1, #sss_touchspin_2_1').TouchSpin({
+        $('#vqn_touchspin_1, #vqn_touchspin_2_1').TouchSpin({
             buttondown_class: 'btn btn-secondary',
             buttonup_class: 'btn btn-secondary',
 
@@ -18,7 +18,7 @@ var KTKBootstrapTouchspin = function () {
         });
 
         // with prefix
-        $('#sss_touchspin_2, #sss_touchspin_2_2').TouchSpin({
+        $('#vqn_touchspin_2, #vqn_touchspin_2_2').TouchSpin({
             buttondown_class: 'btn btn-secondary',
             buttonup_class: 'btn btn-secondary',
 
@@ -30,7 +30,7 @@ var KTKBootstrapTouchspin = function () {
         });
 
         // vertical button alignment:
-        $('#sss_touchspin_3, #sss_touchspin_2_3').TouchSpin({
+        $('#vqn_touchspin_3, #vqn_touchspin_2_3').TouchSpin({
             buttondown_class: 'btn btn-secondary',
             buttonup_class: 'btn btn-secondary',
 
@@ -42,7 +42,7 @@ var KTKBootstrapTouchspin = function () {
         });
 
         // vertical buttons with custom icons:
-        $('#sss_touchspin_4, #sss_touchspin_2_4').TouchSpin({
+        $('#vqn_touchspin_4, #vqn_touchspin_2_4').TouchSpin({
             buttondown_class: 'btn btn-secondary',
             buttonup_class: 'btn btn-secondary',
             verticalbuttons: true,
@@ -51,7 +51,7 @@ var KTKBootstrapTouchspin = function () {
         });
 
         // vertical buttons with custom icons:
-        $('#sss_touchspin_5, #sss_touchspin_2_5').TouchSpin({
+        $('#vqn_touchspin_5, #vqn_touchspin_2_5').TouchSpin({
             buttondown_class: 'btn btn-secondary',
             buttonup_class: 'btn btn-secondary',
             verticalbuttons: true,
@@ -62,7 +62,7 @@ var KTKBootstrapTouchspin = function () {
 
     var validationStateDemos = function () {
         // validation state demos
-        $('#sss_touchspin_1_validate').TouchSpin({
+        $('#vqn_touchspin_1_validate').TouchSpin({
             buttondown_class: 'btn btn-secondary',
             buttonup_class: 'btn btn-secondary',
 
@@ -74,7 +74,7 @@ var KTKBootstrapTouchspin = function () {
         });
 
         // vertical buttons with custom icons:
-        $('#sss_touchspin_2_validate').TouchSpin({
+        $('#vqn_touchspin_2_validate').TouchSpin({
             buttondown_class: 'btn btn-secondary',
             buttonup_class: 'btn btn-secondary',
 
@@ -86,7 +86,7 @@ var KTKBootstrapTouchspin = function () {
             maxboostedstep: 10,
         });
 
-        $('#sss_touchspin_3_validate').TouchSpin({
+        $('#vqn_touchspin_3_validate').TouchSpin({
             buttondown_class: 'btn btn-secondary',
             buttonup_class: 'btn btn-secondary',
             verticalbuttons: true,

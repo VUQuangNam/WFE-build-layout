@@ -5,17 +5,17 @@ var KTIONRangeSlider = function () {
     // Private functions
     var demos = function () {
         // basic demo
-        $('#sss_slider_1').ionRangeSlider();
+        $('#vqn_slider_1').ionRangeSlider();
 
         // min & max values
-        $('#sss_slider_2').ionRangeSlider({
+        $('#vqn_slider_2').ionRangeSlider({
             min: 100,
             max: 1000,
             from: 550
         });
 
         // custom prefix
-        $('#sss_slider_3').ionRangeSlider({
+        $('#vqn_slider_3').ionRangeSlider({
             type: "double",
             grid: true,
             min: 0,
@@ -26,7 +26,7 @@ var KTIONRangeSlider = function () {
         });
 
         // range & step
-        $('#sss_slider_4').ionRangeSlider({
+        $('#vqn_slider_4').ionRangeSlider({
             type: "double",
             grid: true,
             min: -1000,
@@ -36,7 +36,7 @@ var KTIONRangeSlider = function () {
         });
 
         // fractional step
-        $('#sss_slider_5').ionRangeSlider({
+        $('#vqn_slider_5').ionRangeSlider({
             type: "double",
             grid: true,
             min: -12.8,
@@ -47,7 +47,7 @@ var KTIONRangeSlider = function () {
         });
 
         // using postfixes
-        $('#sss_slider_6').ionRangeSlider({
+        $('#vqn_slider_6').ionRangeSlider({
             type: "single",
             grid: true,
             min: -90,
@@ -57,7 +57,7 @@ var KTIONRangeSlider = function () {
         });
 
         // using text
-        $('#sss_slider_7').ionRangeSlider({
+        $('#vqn_slider_7').ionRangeSlider({
             type: "double",
             min: 100,
             max: 200,
