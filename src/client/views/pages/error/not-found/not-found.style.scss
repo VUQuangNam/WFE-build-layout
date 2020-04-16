@@ -1,0 +1,54 @@
+.session {
+    position: relative;
+    z-index: 4000;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    top: 70px;
+}
+
+.text-xs-center {
+    text-align: center !important;
+}
+
+.session-content {
+    padding: 40px 1rem;
+    align-items: center;
+    justify-content: center;
+    flex: 1 0 auto;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.error-title {
+    font-size: 150px;
+    line-height: 1.2;
+    font-weight: 900;
+    display: inline-table;
+    position: relative;
+    background: #3f51b5;
+    color: #fff;
+    padding: 0 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0 0 1rem;
+}
+
+.error-subtitle {
+    font-size: 32px;
+    font-weight: 300;
+}
+
+.mat-text-muted {
+    color: rgba(0, 0, 0, .54) !important;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}

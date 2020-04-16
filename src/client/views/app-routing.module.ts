@@ -25,12 +25,17 @@ import { IconGroupComponent } from './components/icons/icon.component';
 /** page component */
 import { DefaultLayoutComponent } from './layouts/default/default-layout.component';
 import { CartLayoutComponent } from './layouts/cart/cart-layout.component';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { NotFoundComponent } from './pages/error/not-found/not-found.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 /** auth component */
 import { LoginComponent } from './pages/authorization/login/login.component';
 import { ModalComponent } from './components/modal/modal/modal.component';
+
+/** account component */
+import { AccountComponent } from './pages/accounts/account.component';
+import { DetailAccountComponent } from './pages/accounts/detail/detail.component';
+import { ChangePasswordComponent } from './pages/accounts/change-password/change-password.component';
 
 /** config currency */
 export const currencyConfig = {
@@ -55,6 +60,23 @@ const routes: Routes = [
             { path: 'trang-chu', component: DashboardComponent }
         ]
     },
+    /** account component */
+    {
+        path: '',
+        component: DefaultLayoutComponent,
+        canActivate: [AuthGuard],
+        children: [
+            {
+                path: '',
+                component: AccountComponent,
+                children: [
+                    { path: 'thong-tin-ca-nhan', component: DetailAccountComponent },
+                    { path: 'thay-doi-mat-khau', component: ChangePasswordComponent },
+                ]
+            }
+        ]
+
+    },
     /** default component */
     { path: 'dang-nhap', component: LoginComponent },
     { path: '**', component: NotFoundComponent },
@@ -72,6 +94,12 @@ const routes: Routes = [
 
         /** dashbroad */
         DashboardComponent,
+
+        /** begin:: account component */
+        AccountComponent,
+        DetailAccountComponent,
+        ChangePasswordComponent,
+        /** begin:: account component */
 
         /** begin:: auth component */
         LoginComponent,

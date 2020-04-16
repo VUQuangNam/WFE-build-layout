@@ -46258,13 +46258,14 @@ body.swal2-height-auto {
 }
 
 .vqn-widget.vqn-widget--user-profile-1 .vqn-widget__head .vqn-widget__media img {
-    width: 90px;
+    width: 50px;
     max-width: 100%;
-    border-radius: 8px;
+    border-radius: 50%;
 }
 
 .vqn-widget.vqn-widget--user-profile-1 .vqn-widget__head .vqn-widget__content {
     padding-left: 1.6rem;
+    margin: auto;
 }
 
 .vqn-widget.vqn-widget--user-profile-1 .vqn-widget__head .vqn-widget__content .vqn-widget__section .vqn-widget__username {
@@ -52885,4 +52886,3 @@ body {
         margin-left: 0;
     }
 }
-

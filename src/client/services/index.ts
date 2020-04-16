@@ -6,3 +6,6 @@ export * from './auth.service';
 
 /** Service Client */
 export * from './service-client.service';
+
+/** User service */
+export * from './account.service';

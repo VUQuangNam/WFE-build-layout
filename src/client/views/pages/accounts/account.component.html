@@ -1,0 +1,81 @@
+<div class="vqn-grid__item vqn-grid__item--fluid vqn-grid vqn-grid--hor">
+    <div class="vqn-container vqn-grid__item vqn-grid__item--fluid row">
+        <div class="vqn-grid__item vqn-app__toggle vqn-app__aside col-3 mt-4">
+            <!--begin:: Widgets/Applications/User/Profile1-->
+            <div class="vqn-portlet ">
+                <div class="vqn-portlet__head  vqn-portlet__head--noborder">
+                    <div class="vqn-portlet__head-label">
+                        <h3 class="vqn-portlet__head-title">
+                        </h3>
+                    </div>
+
+                </div>
+                <div class="vqn-portlet__body vqn-portlet__body--fit-y">
+                    <!--begin::Widget -->
+                    <div class="vqn-widget vqn-widget--user-profile-1">
+                        <div class="vqn-widget__head">
+                            <div class="vqn-widget__media">
+                                <img *ngIf="model?.avatar" [src]="model.avatar">
+                            </div>
+                            <div class="vqn-widget__content">
+                                <div class="vqn-widget__section">
+                                    <span href="#" class="vqn-widget__username">
+                                        <b> {{model?.name}} </b>
+                                        <i class="flaticon2-correct vqn-font-success"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vqn-widget__body">
+                            <div class="vqn-widget__content">
+                                <div class="vqn-widget__info">
+                                    <span class="vqn-widget__label">Số điện thoại:</span>
+                                    <span class="vqn-widget__data vqn-font-dark">{{model?.phone}}</span>
+                                </div>
+                                <div class="vqn-widget__info">
+                                    <span class="vqn-widget__label">Email:</span>
+                                    <span
+                                        class="vqn-widget__data vqn-font-dark">{{model?.email || 'Chưa cập nhật'}}</span>
+                                </div>
+                                <div class="vqn-widget__info">
+                                    <span class="vqn-widget__label">Địa chỉ:</span>
+                                    <span class="vqn-widget__data vqn-font-dark">
+                                        {{model?.address || 'Chưa cập nhật'}}
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="vqn-widget__items">
+                                <div [routerLink]="['/thong-tin-ca-nhan']" routerLinkActive="vqn-widget__item--active"
+                                    class="vqn-widget__item">
+                                    <span class="vqn-widget__section">
+                                        <span class="vqn-widget__icon">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                        <span class="vqn-widget__desc vqn-font-dark">
+                                            Thông tin cá nhân
+                                        </span>
+                                    </span>
+                                </div>
+                                <div [routerLink]="['/thay-doi-mat-khau']" routerLinkActive="vqn-widget__item--active"
+                                    class="vqn-widget__item">
+                                    <span class="vqn-widget__section">
+                                        <span class="vqn-widget__icon">
+                                            <i class="fa fa-user-cog"></i>
+                                        </span>
+                                        <span class="vqn-widget__desc vqn-font-dark">
+                                            Đổi mật khẩu
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end::Widget -->
+                </div>
+            </div>
+        </div>
+        <div class="col-9 vqn-grid__item vqn-app__toggle vqn-app__aside mt-4">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

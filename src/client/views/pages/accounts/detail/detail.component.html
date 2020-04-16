@@ -1,0 +1,154 @@
+<div class="vqn-grid__item vqn-grid__item--fluid vqn-app__content">
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="vqn-portlet vqn-container--fluid">
+                <div class="vqn-portlet__head">
+                    <div class="vqn-portlet__head-label">
+                        <h3 class="vqn-portlet__head-title">
+                            Thông tin cá nhân
+                        </h3>
+                    </div>
+                </div>
+                <form class="vqn-form vqn-form--label-right" #f="ngForm" (ngSubmit)="updateProfile(f)">
+                    <div class="vqn-portlet__body">
+                        <div class="vqn-section vqn-section--first">
+                            <div class="vqn-section__body">
+                                <div class="row">
+                                    <label class="col-xl-3"></label>
+                                    <div class="col-lg-9 col-xl-6">
+                                        <h3 class="vqn-section__title vqn-section__title-sm">
+                                            <b> Thông tin cơ bản</b>
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-xl-3 col-lg-3 col-form-label">
+                                        Hình đại diện:
+                                    </label>
+                                    <div class="col-lg-9 col-xl-6">
+                                        <div class="vqn-avatar vqn-avatar--outline" id="vqn_user_avatar">
+                                            <div class="vqn-avatar__holder">
+                                                <img *ngIf="!model.avatar"
+                                                    src="../../../../assets/media/default/img-default.png"
+                                                    style="width:120px; height: 120px;">
+                                                <img *ngIf="model.avatar" [src]="model.avatar"
+                                                    style="width:120px; height: 120px;">
+                                            </div>
+                                            <label class="vqn-avatar__upload" data-toggle="vqn-tooltip" title=""
+                                                data-original-title="Change avatar">
+                                                <i class="fa fa-pen"></i>
+                                                <input type="file" name="profile_avatar"
+                                                    (change)="onUploadAvatar($event)">
+                                            </label>
+                                            <span class="vqn-avatar__cancel" data-toggle="vqn-tooltip" title=""
+                                                data-original-title="Cancel avatar">
+                                                <i class="fa fa-times"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group validated row">
+                                    <label class="col-xl-3 col-lg-3 col-form-label">
+                                        Họ và tên:
+                                    </label>
+                                    <div class="col-lg-9 col-xl-6">
+                                        <input class="form-control" [(ngModel)]="model.name" name="name" required
+                                            minlength="1" #name="ngModel" type="text">
+                                        <div class="invalid-feedback"
+                                            *ngIf="name.errors && (name.dirty || name.touched || !invalid)">
+                                            Tên hiển thị không được để trống.
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-xl-3 col-lg-3 col-form-label">
+                                        Ngày sinh:
+                                    </label>
+                                    <div class="col-lg-9 col-xl-6">
+                                        <input type="text" class="form-control" name="birthday" placeholder="dd/mm/yyyy"
+                                            placement="top" [(ngModel)]="model.birthday" #birthday="ngModel"
+                                            #datepickerYMD="bsDatepicker" bsDatepicker
+                                            [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-xl-3 col-lg-3 col-form-label">
+                                        Giới tính:
+                                    </label>
+                                    <div class="col-lg-9 col-xl-6">
+                                        <select class="form-control" [(ngModel)]="model.gender" name="gender">
+                                            <option value="undefined" disabled>
+                                                Chọn giới tính
+                                            </option>
+                                            <option value="male"> Nam </option>
+                                            <option value="female"> Nữ </option>
+                                            <option value="unknown"> Khác </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <label class="col-xl-3"></label>
+                                    <div class="col-lg-9 col-xl-6">
+                                        <h3 class="vqn-section__title vqn-section__title-sm">
+                                            <b>Thông tin liên lạc</b>
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="form-group validated row">
+                                    <label class="col-xl-3 col-lg-3 col-form-label">
+                                        Điện thoại:
+                                    </label>
+                                    <div class="col-lg-9 col-xl-6">
+                                        <input type="text" class="form-control" name="phone" [(ngModel)]="model.phone"
+                                            #phone="ngModel" pattern="^(0[3|5|7|8|9])+([0-9]{8})$" minlength="10"
+                                            maxlength="10" placeholder="Nhập số điện thoại." required>
+                                        <div class="invalid-feedback"
+                                            *ngIf="phone.errors && ( phone.dirty || phone.touched ||!invalid)">
+                                            Số điện thoại không được để trống và chỉ được 10 ký tự số.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group validated row">
+                                    <label class="col-xl-3 col-lg-3 col-form-label">Email:</label>
+                                    <div class="col-lg-9 col-xl-6">
+                                        <input type="text" pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"
+                                            class="form-control" name="email" [(ngModel)]="model.email" #email="ngModel"
+                                            placeholder="Nhập email">
+                                        <div class="invalid-feedback" *ngIf="!email.valid">
+                                            Định dạng email không hợp lệ.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group form-group-last row">
+                                    <label class="col-xl-3 col-lg-3 col-form-label">
+                                        Địa chỉ:</label>
+                                    <div class="col-lg-9 col-xl-6">
+                                        <input type="text" class="form-control" name="address"
+                                            [(ngModel)]="model.address" #address="ngModel" placeholder="Nhập địa chỉ">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="vqn-portlet__foot">
+                        <div class="vqn-form__actions">
+                            <div class="row">
+                                <div class="col-lg-9 col-xl-9">
+                                </div>
+                                <div class="col-lg-3 col-xl-3">
+                                    <button type="submit" class="btn btn-success vqn-margin-r-10" [disabled]="loading"
+                                        [ngClass]="{'vqn-spinner vqn-spinner--right vqn-spinner--md vqn-spinner--light': loading}">
+                                        Cập nhật thông tin
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
