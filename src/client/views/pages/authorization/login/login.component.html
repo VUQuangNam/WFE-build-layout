@@ -14,21 +14,16 @@
             <div class="vqn-form-login">
                 <div class="vqn-form-header">
                     <h3>{{ isSignin ? 'Đăng ký nhanh' : 'Đăng nhập'}}</h3>
-                    <div *ngIf="!isSignin" class="d-flex justify-content-end social_icon">
+                    <!-- <div *ngIf="!isSignin" class="d-flex justify-content-end social_icon">
                         <span>
-                            <!-- <i class="fa fa-facebook-square fa-fw"></i> -->
                             <img src="../../../../assets/media/client-logos/Facebook_icon_2013.svg.png" alt=""
                                 style="width: 35px; height: 35px;">
                         </span>
                         <span>
-                            <!-- <i class="fa fa-google-plus-square fa-fw"></i> -->
                             <img src="../../../../assets/media/client-logos/icon-gg.png" alt=""
                                 style="width: 35px; height: 35px;">
                         </span>
-                        <!-- <span>
-                            <i class="fab fa-twitter fa-fw"></i>
-                        </span> -->
-                    </div>
+                    </div> -->
                 </div>
                 <div class="vqn-form-body">
                     <div class="vqn-login__form">
@@ -56,6 +51,15 @@
                                 <button type="submit" id="sss_login_signin_submit" class="btn btn-danger btn-pill">
                                     Đăng Nhập
                                 </button>
+                                <br>
+                                <div class="mt-2">
+                                    <a href="#" class="btn vqn-btn">
+                                        <i class="fab fa-facebook-f"></i>Facebook
+                                    </a>
+                                    <a href="#" class="btn vqn-btn">
+                                        <i class="fab fa-google"></i> Google
+                                    </a>
+                                </div>
                             </div>
                         </form>
                         <form *ngIf="isSignin" class="vqn-form" #formSiginUp="ngForm" autocomplete="off">

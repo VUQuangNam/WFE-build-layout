@@ -46357,7 +46357,7 @@ body.swal2-height-auto {
 .vqn-widget.vqn-widget--user-profile-1 .vqn-widget__body .vqn-widget__items .vqn-widget__item.vqn-widget__item--active {
     -webkit-transition: color 0.3s ease;
     transition: color 0.3s ease;
-    background: #f2f3f7;
+    background: #ced0d4;
     border-radius: 4px;
 }
 
@@ -46387,7 +46387,7 @@ body.swal2-height-auto {
 .vqn-widget.vqn-widget--user-profile-1 .vqn-widget__body .vqn-widget__items .vqn-widget__item:hover {
     -webkit-transition: color 0.3s ease;
     transition: color 0.3s ease;
-    background: #f2f3f7;
+    background: #ced0d4;
     cursor: pointer;
     border-radius: 4px;
 }

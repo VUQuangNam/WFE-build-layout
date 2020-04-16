@@ -410,6 +410,10 @@ $color_5: #585a62;
         .vqn-login__form {
             margin-top: 2rem;
 
+            a:hover {
+                background-color: #84859a;
+            }
+
             .form-group {
                 margin: 0;
                 padding: 0;
@@ -488,21 +492,7 @@ $color_5: #585a62;
     }
 }
 
-.justify-content-end {
-    justify-content: flex-end !important;
-}
-
-.d-flex {
-    // display: -ms-flexbox !important;
-    display: flex !important;
-}
-
-.social_icon {
-    position: absolute;
-    right: 20px;
-    top: -25px;
-}
-
-.social_icon span {
-    margin-left: 10px;
+.vqn-btn {
+    color: white;
+    border: 1px solid;
 }

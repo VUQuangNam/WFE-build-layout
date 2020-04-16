@@ -24,7 +24,6 @@ import { IconGroupComponent } from './components/icons/icon.component';
 
 /** page component */
 import { DefaultLayoutComponent } from './layouts/default/default-layout.component';
-import { CartLayoutComponent } from './layouts/cart/cart-layout.component';
 import { NotFoundComponent } from './pages/error/not-found/not-found.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
@@ -36,6 +35,7 @@ import { ModalComponent } from './components/modal/modal/modal.component';
 import { AccountComponent } from './pages/accounts/account.component';
 import { DetailAccountComponent } from './pages/accounts/detail/detail.component';
 import { ChangePasswordComponent } from './pages/accounts/change-password/change-password.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
 
 /** config currency */
 export const currencyConfig = {
@@ -78,6 +78,7 @@ const routes: Routes = [
 
     },
     /** default component */
+    { path: 'home-page', component: HomePageComponent },
     { path: 'dang-nhap', component: LoginComponent },
     { path: '**', component: NotFoundComponent },
 ];
@@ -100,6 +101,8 @@ const routes: Routes = [
         DetailAccountComponent,
         ChangePasswordComponent,
         /** begin:: account component */
+
+        HomePageComponent,
 
         /** begin:: auth component */
         LoginComponent,

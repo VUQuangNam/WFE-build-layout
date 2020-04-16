@@ -12,30 +12,6 @@ export interface User {
     gender: string;
     address: string;
     start_date: Date;
-    salary: number;
-
-    /** user access */
-    roles: [
-        {
-            id: string;
-            name: string;
-        }
-    ];
-    permissions: [
-        {
-            id: string;
-            name: string;
-            group: string;
-        }
-    ];
-    stores: [
-        {
-            id: string;
-            name: string;
-            phone: string;
-            address: string;
-        }
-    ];
 
     /** user config */
     setting: {

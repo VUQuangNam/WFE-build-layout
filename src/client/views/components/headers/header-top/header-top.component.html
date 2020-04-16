@@ -4,8 +4,9 @@
         <div class="vqn-header__brand   vqn-grid__item" id="sss_header_brand">
             <div class="vqn-header__brand-logo">
                 <a href="/trang-chu">
-                    <img alt="Logo" src="/assets/media/logos/" class="vqn-header__brand-logo-default" />
-                    <img alt="Logo" src="/assets/media/logos/" class="vqn-header__brand-logo-sticky" />
+                    <img alt="Logo" src="/assets/media/logos/logo-1.png" class="vqn-header__brand-logo-default"
+                        style="background-size: cover; height: 55px;" />
+                    <!-- <img alt="Logo" src="/assets/media/logos/logo-1.png" class="vqn-header__brand-logo-sticky" /> -->
                 </a>
             </div>
         </div>
@@ -14,14 +15,14 @@
         <!-- begin:: Header Topbar -->
         <div class="vqn-header__topbar">
             <!--begin: Document bar -->
-            <div class="vqn-header__topbar-item vqn-header__topbar-item--user">
+            <!-- <div class="vqn-header__topbar-item vqn-header__topbar-item--user">
                 <div class="vqn-header__topbar-wrapper vqn-padding-l-15 vqn-padding-r-5">
                     <a href="https://drive.google.com/drive/folders/1yI_DHD05QmcDHQhJjjci_J0gZ2KWjEZG?usp=sharing"
                         class="vqn-header__topbar-username" target="_blank">
                         Tài liệu hướng dẫn
                     </a>
                 </div>
-            </div>
+            </div> -->
             <!--end: Document bar -->
 
             <!--begin: Notifications -->
@@ -434,11 +435,12 @@
                 <div class="vqn-header__topbar-wrapper vqn-padding-l-15" data-toggle="dropdown" data-offset="10px,10px"
                     aria-expanded="false">
                     <!-- <span class="vqn-header__topbar-welcome">Hi,</span> -->
-                    <span class="vqn-header__topbar-username">VŨ QUANG NAM</span>
+                    <span class="vqn-header__topbar-username">{{model?.name}}</span>
                     <!-- <img class="vqn-hidden" alt="Pic" src="/assets/media/users/300_21.jpg"> -->
                     <!--use below badge element instead the user avatar to display username's first letter(remove vqn-hidden class to display it) -->
                     <span
-                        class="vqn-badge vqn-badge--username vqn-badge--unified-success vqn-badge--lg vqn-badge--rounded vqn-badge--bold vqn-hidden-">S</span>
+                        class="vqn-badge vqn-badge--username vqn-badge--unified-success vqn-badge--lg vqn-badge--rounded vqn-badge--bold vqn-hidden-">
+                        <img [src]="model?.avatar" alt=""></span>
                 </div>
                 <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-md">
 
